@@ -2743,7 +2743,7 @@ focus_tree = {
 			country_exists = TUR
 		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_soviet_ally
 		cost = 10
 		ai_will_do = {
@@ -2776,7 +2776,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_remiliterize_rhineland
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_remiliterize_rhineland
 		mutually_exclusive = { focus = GER_oppose_hitler }
 		prerequisite = { focus = GER_rhineland_question }
 		relative_position_id = GER_rhineland_question
@@ -2797,7 +2797,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_japan_friend
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_ger_befriend_japan
 		prerequisite = { focus = GER_remiliterize_rhineland }
 		mutually_exclusive = { focus = GER_china_friend }
 		available = {
@@ -2859,7 +2859,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_china_friend
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_ger_befriend_china
+		# icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = GER_remiliterize_rhineland }
 		mutually_exclusive = { focus = GER_japan_friend }
 		available = {
@@ -3116,7 +3117,7 @@ focus_tree = {
 		#	}
 		#}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_ussr_war_goal
 		cost = 10
 		ai_will_do = {
@@ -3181,7 +3182,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_anschluss
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_ger_anschluss
 		prerequisite = { focus = GER_remiliterize_rhineland }
 		available_if_capitulated = no
 		available = {
@@ -3197,8 +3198,8 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 2
-		y = 2
+		x = 3
+		y = 1
 		relative_position_id = GER_remiliterize_rhineland
 		cost = 10
 		ai_will_do = {
@@ -3344,8 +3345,8 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = GER_anschluss }
 		available = { is_subject = no }
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = GER_anschluss
 		cost = 10
 		bypass = {
@@ -3441,7 +3442,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = GER_demand_memel
 		cost = 10
 		ai_will_do = {
@@ -3772,7 +3773,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -3882,7 +3883,7 @@ focus_tree = {
 			is_puppet = yes
 		}
 		cancel_if_invalid = yes
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -5211,7 +5212,7 @@ focus_tree = {
 			}
 		}
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = GER_denmark_friend
 		cost = 10
 		ai_will_do = {
@@ -5356,7 +5357,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -5399,7 +5400,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10

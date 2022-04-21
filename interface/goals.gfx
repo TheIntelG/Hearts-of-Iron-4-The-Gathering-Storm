@@ -744,8 +744,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_anschluss"
-		texturefile = "gfx/interface/goals/goal_anschluss.dds"
+		name = "GFX_focus_ger_anschluss"
+		texturefile = "gfx/interface/goals/GER/focus_ger_anschluss.dds"
 				
 	}
 
@@ -2980,5 +2980,20 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_rhineland_question"
 		texturefile = "gfx/interface/goals/GER/focus_rhineland_question.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_remiliterize_rhineland"
+		texturefile = "gfx/interface/goals/GER/focus_remiliterize_rhineland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_china"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_china.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_japan"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_japan.dds"
 	}
 }
