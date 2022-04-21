@@ -2757,7 +2757,7 @@ focus_tree = {
 	focus = {
 		id = GER_rhineland_question
 		icon = GFX_focus_rhineland_question
-		x = 35
+		x = 34
 		y = 0
 		cost = 10
 		available = {
@@ -2780,7 +2780,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_oppose_hitler }
 		prerequisite = { focus = GER_rhineland_question }
 		relative_position_id = GER_rhineland_question
-		x = -10
+		x = -9
 		y = 1
 		cost = 0
 		available = {
@@ -4624,8 +4624,8 @@ focus_tree = {
 	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_goal_generic_build_navy
-		x = 34
-		y = 2
+		x = 52
+		y = 0
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -4713,7 +4713,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = GER_naval_rearmament }
 		x = 0
-		y = 3
+		y = 1
 		relative_position_id = GER_naval_rearmament
 		cost = 5
 		ai_will_do = {
@@ -4787,7 +4787,7 @@ focus_tree = {
 		id = GER_naval_effort2
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = GER_naval_effort }
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = GER_naval_effort
 		cost = 10
@@ -4854,8 +4854,8 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
-		x = -1
-		y = 3
+		x = 0
+		y = 1
 		relative_position_id = GER_naval_effort
 		cost = 10
 		ai_will_do = {
@@ -4942,8 +4942,8 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_plan_z focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
-		x = 1
-		y = 3
+		x = 2
+		y = 1
 		relative_position_id = GER_naval_effort
 		cost = 10
 		ai_will_do = {
@@ -5058,7 +5058,7 @@ focus_tree = {
 	focus = {
 		id = GER_denmark_friend
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = GER_plan_z }
+		prerequisite = { focus = GER_danzig_or_war }
 		mutually_exclusive = { focus = GER_weserubung }
 
 		available = {
@@ -5079,9 +5079,9 @@ focus_tree = {
 				is_in_faction_with = DEN
 			}
 		}
-		x = -2
-		y = 1
-		relative_position_id = GER_plan_z
+		x = 3
+		y = 2
+		relative_position_id = GER_danzig_or_war
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -5743,7 +5743,7 @@ focus_tree = {
 				owns_state = 47 
 			}
 		}
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = GER_fate_of_yugoslavia
 		cost = 10
@@ -5888,7 +5888,7 @@ focus_tree = {
 			}
 			NOT = { is_in_faction_with = GRE }
 		}
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = GER_fate_of_yugoslavia
 		cost = 10
@@ -5940,7 +5940,7 @@ focus_tree = {
 		available = {
 			hidden_trigger = { always = no }
 		}
-		x = 12
+		x = 9
 		y = 1
 		relative_position_id = GER_rhineland_question
 		cost = 0
@@ -6196,12 +6196,11 @@ focus_tree = {
 		id = GER_focus_on_the_true_enemy
 		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = GER_return_of_the_kaiser }
-		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_expatriate_the_communists }
 		available = {
 			is_subject = no
 		}
-		x = -6
+		x = -5
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser
 		cost = 10
@@ -6222,14 +6221,14 @@ focus_tree = {
 	focus = {
 		id = GER_rebuild_the_high_seas_fleet
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = GER_focus_on_the_true_enemy }
+		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_plan_z focus = GER_u_boat_effort focus = GER_accept_british_naval_dominance }
 		available = {
 			is_subject = no
 		}
-		x = 0
-		y = 2
-		relative_position_id = GER_focus_on_the_true_enemy
+		x = -2
+		y = 1
+		relative_position_id = GER_naval_effort
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -6301,13 +6300,13 @@ focus_tree = {
 	focus = {
 		id = GER_our_place_in_the_sun
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = GER_rebuild_the_high_seas_fleet }
+		prerequisite = { focus = GER_focus_on_the_true_enemy }
 		available = {
 			is_subject = no
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_rebuild_the_high_seas_fleet
+		relative_position_id = GER_focus_on_the_true_enemy
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -6352,13 +6351,13 @@ focus_tree = {
 	focus = {
 		id = GER_pride_of_the_modern_germany
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = GER_our_place_in_the_sun }
+		prerequisite = { focus = GER_rebuild_the_high_seas_fleet }
 		available = {
 			is_subject = no
 		}
 		x = 0
-		y = 1
-		relative_position_id = GER_our_place_in_the_sun
+		y = 2
+		relative_position_id = GER_rebuild_the_high_seas_fleet
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -6442,8 +6441,8 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		x = -1
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = GER_our_place_in_the_sun
 		cost = 10
 		ai_will_do = {
@@ -6470,7 +6469,7 @@ focus_tree = {
 		will_lead_to_war_with = ENG
 		will_lead_to_war_with = FRA
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_prepare_for_the_next_blockade
 		cost = 10
 		ai_will_do = {
@@ -6625,7 +6624,7 @@ focus_tree = {
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = LUX
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_break_the_anglo_french_colonial_hegemony
 		cost = 4
 		ai_will_do = {
@@ -6649,7 +6648,7 @@ focus_tree = {
 	focus = {
 		id = GER_crossing_the_atlantic
 		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony focus = GER_plan_z focus = GER_modular_construction }
+		prerequisite = { focus = GER_plan_z focus = GER_modular_construction focus = GER_pride_of_the_modern_germany }
 		available = {
 			is_subject = no
 			has_war_with = USA
@@ -6672,9 +6671,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -2
-		y = 1
-		relative_position_id = GER_break_the_anglo_french_colonial_hegemony
+		x = 0
+		y = 3
+		relative_position_id = GER_plan_z
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -6776,8 +6775,8 @@ focus_tree = {
 		bypass = {
 			is_in_faction = yes
 		}
-		x = 1
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = GER_our_place_in_the_sun
 		cost = 5
 		ai_will_do = {
@@ -6853,7 +6852,7 @@ focus_tree = {
 			NOT = { has_war_with = ITA }
 		}
 		cancel_if_invalid = yes
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_the_central_powers
 		cost = 10
@@ -6884,7 +6883,7 @@ focus_tree = {
 			ITA = { has_country_leader = { ruling_only = yes character = ITA_benito_mussolini } }
 		}
 		cancel_if_invalid = yes
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_prepare_italian_coup
 		cost = 10
@@ -6942,7 +6941,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = GER_the_central_powers
 		cost = 10
@@ -7153,7 +7152,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		will_lead_to_war_with = SWI
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_carte_blanche_for_alsace_and_french_colonies
 		cost = 4
 		ai_will_do = {
@@ -7191,7 +7190,7 @@ focus_tree = {
 		bypass = {
 		}
 		cancel_if_invalid = yes
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_schlieffen_once_more
 		cost = 10
@@ -8514,7 +8513,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_central_european_alliance
 		cost = 10
@@ -8616,7 +8615,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = -1
 		y = 2
 		relative_position_id = GER_scandinavian_membership
 		cost = 10
@@ -8726,7 +8725,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_scandinavian_membership
 		cost = 10
 		ai_will_do = {
@@ -8810,7 +8809,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 1
 		y = 2
 		relative_position_id = GER_scandinavian_membership
 		cost = 10
@@ -8893,7 +8892,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_polish_membership
 		cost = 10
 		ai_will_do = {
@@ -8947,7 +8946,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		x = 7
+		x = 5
 		y = 1
 		relative_position_id = GER_central_european_alliance
 		cost = 10
@@ -9062,7 +9061,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		x = 16
+		x = 3
 		y = 1
 		relative_position_id = GER_secure_the_new_state
 		cost = 10
