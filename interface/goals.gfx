@@ -2996,4 +2996,14 @@ spriteTypes = {
 		name = "GFX_focus_ger_befriend_japan"
 		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_japan.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_tactical_bomber"
+		texturefile = "gfx/interface/goals/generic_air_tactical_bomber.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_scout_plane"
+		texturefile = "gfx/interface/goals/generic_air_scout_plane.dds"
+	}
 }

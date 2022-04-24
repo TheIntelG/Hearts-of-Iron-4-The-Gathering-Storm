@@ -1,0 +1,93 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = tgs_generic
+
+# Air Innovations
+country_event = {
+	id = tgs_generic.1
+	title = tgs_generic.1.t
+	desc = tgs_generic.1.d
+	picture = GFX_report_event_SOV_purge_aircraft_2
+
+	is_triggered_only = yes
+
+	option = {
+		# Strategic Destruction
+		name = tgs_generic.1.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_tech = air_superiority
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					has_tech = formation_flying
+					has_tech = force_rotation
+				}
+				factor = 0
+			}
+		}
+
+		add_doctrine_cost_reduction = {
+			name = air_sup_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = strategic_destruction_tree
+		}
+	}
+
+	option = {
+		# Battlefield Support
+		name = tgs_generic.1.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_tech = formation_flying
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					has_tech = air_superiority
+					has_tech = force_rotation
+				}
+				factor = 0
+			}
+		}
+
+		add_doctrine_cost_reduction = {
+			name = air_sup_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = battlefield_support_tree
+		}
+	}
+
+	option = {
+		# Operational Integrity
+		name = tgs_generic.1.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_tech = force_rotation
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					has_tech = air_superiority
+					has_tech = formation_flying
+				}
+				factor = 0
+			}
+		}
+
+		add_doctrine_cost_reduction = {
+			name = air_sup_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = operational_integrity_tree
+		}
+	}
+}

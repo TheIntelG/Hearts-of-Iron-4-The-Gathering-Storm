@@ -781,6 +781,7 @@
  cat_strategic_bomber:0 "Strategic Bomber models"
  naval_bomber:0 "Naval Bomber models"
  cas_bomber:0 "Close Air Support models"
+ cat_scout_plane:0 "Scout Plane models"
  cat_mechanized_equipment:0 "Mechanized models"
  encryption_tech:0 "Encryption methods"
  decryption_tech:0 "Decryption methods"
