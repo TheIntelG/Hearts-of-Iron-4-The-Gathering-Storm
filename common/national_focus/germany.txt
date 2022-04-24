@@ -2107,7 +2107,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_goal_generic_build_navy
-		x = 4
+		x = 5
 		y = 0
 		relative_position_id = GER_army_innovation
 		cost = 5
@@ -2195,7 +2195,7 @@ focus_tree = {
 		id = GER_air_innovation
 		text = air_innovation
 		icon = GFX_goal_generic_build_airforce
-		x = 10
+		x = 8
 		y = 0
 		relative_position_id = GER_naval_rearmament
 		cost = 5
@@ -2844,7 +2844,19 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			
+			42 = { set_demilitarized_zone = no }
+			51 = { set_demilitarized_zone = no }
+			add_political_power = 120
+			army_experience = 5
+			add_named_threat = { threat = 5 name = GER_remiliterize_rhineland }
+			custom_effect_tooltip = GER_rhineland_ultimatum
+			if = {
+				limit = { FRA = { is_subject = no } }
+				FRA = {
+					country_event = { id = germany.60 }
+					custom_effect_tooltip = may_provoke_hostility
+				}
+			}
 		}		
 	}
 
@@ -4888,7 +4900,7 @@ focus_tree = {
 		id = GER_naval_effort2
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = GER_naval_effort }
-		x = 4
+		x = 2
 		y = 1
 		relative_position_id = GER_naval_effort
 		cost = 10
@@ -4951,17 +4963,36 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_plan_z
-		icon = GFX_goal_generic_navy_battleship
+		id = GER_plan_for_the_navy
+		icon = GFX_focus_plan_for_the_navy
 		prerequisite = { focus = GER_naval_effort }
-		mutually_exclusive = { focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = GER_naval_effort
-		cost = 10
+		completion_reward = {
+			GER = {
+				country_event = tgs_generic.2
+			}
+		}
+	}
+
+	focus = {
+		id = GER_plan_z
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GER_plan_for_the_navy }
+		mutually_exclusive = { focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet }
+		x = 0
+		y = 1
+		relative_position_id = GER_plan_for_the_navy
+		cost = 0
 		ai_will_do = {
-			factor = 0.25
+			factor = 1
 		}	
+
+		available = {
+			hidden_trigger = { always = no }
+		}
 
 		available_if_capitulated = yes
 
@@ -5041,17 +5072,32 @@ focus_tree = {
 	focus = {
 		id = GER_u_boat_effort
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = GER_naval_effort }
-		mutually_exclusive = { focus = GER_plan_z focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
+		prerequisite = { focus = GER_plan_for_the_navy }
+		mutually_exclusive = { focus = GER_plan_z focus = GER_rebuild_the_high_seas_fleet }
 		x = 2
 		y = 1
-		relative_position_id = GER_naval_effort
-		cost = 10
+		relative_position_id = GER_plan_for_the_navy
+		cost = 0
 		ai_will_do = {
-			factor = 1
+			base = 1
+			modifier = {
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEFAULT
+					}
+				}
+				factor = 100
+			}
 		}
 
 		available_if_capitulated = yes
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
 		complete_tooltip = {
 			navy_experience = 25
 			every_state = {
@@ -6050,6 +6096,14 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			effect_tooltip = {
+				GER_remove_mefo_bills = yes
+			}
+			42 = { set_demilitarized_zone = no }
+			51 = { set_demilitarized_zone = no }
+			add_political_power = 120
+			add_named_threat = { threat = 5 name = GER_oppose_hitler }
+			country_event = { id = wtt_germany.1 }
 		}
 	}
 
@@ -6322,15 +6376,19 @@ focus_tree = {
 	focus = {
 		id = GER_rebuild_the_high_seas_fleet
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = GER_naval_effort }
-		mutually_exclusive = { focus = GER_plan_z focus = GER_u_boat_effort focus = GER_accept_british_naval_dominance }
+		prerequisite = { focus = GER_plan_for_the_navy }
+		mutually_exclusive = { focus = GER_plan_z focus = GER_u_boat_effort }
 		available = {
 			is_subject = no
 		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
 		x = -2
 		y = 1
-		relative_position_id = GER_naval_effort
-		cost = 10
+		relative_position_id = GER_plan_for_the_navy
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}
@@ -6776,8 +6834,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_plan_z
 		cost = 10
+		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -7148,7 +7207,6 @@ focus_tree = {
 		id = GER_accept_british_naval_dominance
 		icon = GFX_focus_ger_accept_british_naval_dominance
 		prerequisite = { focus = GER_expatriate_the_communists }
-		mutually_exclusive = { focus = GER_plan_z focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet }
 		available = {
 			is_subject = no
 			NOT = { has_war_with = ENG }

@@ -48,20 +48,6 @@ country_event = {
 				factor = 0
 			}
 		}
-		42 = { set_demilitarized_zone = no }
-		51 = { set_demilitarized_zone = no }
-		add_political_power = 120
-		army_experience = 5
-		add_named_threat = { threat = 5 name = GER_remiliterize_rhineland }
-		custom_effect_tooltip = GER_rhineland_ultimatum
-		if = {
-			limit = { FRA = { is_subject = no } }
-			FRA = {
-				country_event = { id = germany.60 }
-				custom_effect_tooltip = may_provoke_hostility
-			}
-		}
-		complete_national_focus = GER_remiliterize_rhineland 
 	}
 
 	option = {
@@ -114,14 +100,5 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = GER_oppose_hitler_civil_war
-		effect_tooltip = {
-			GER_remove_mefo_bills = yes
-		}
-		42 = { set_demilitarized_zone = no }
-		51 = { set_demilitarized_zone = no }
-		add_political_power = 120
-		add_named_threat = { threat = 5 name = GER_oppose_hitler }
-		country_event = { id = wtt_germany.1 }
-		complete_national_focus = GER_oppose_hitler
 	}
 }

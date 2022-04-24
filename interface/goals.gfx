@@ -3006,4 +3006,9 @@ spriteTypes = {
 		name = "GFX_focus_generic_air_scout_plane"
 		texturefile = "gfx/interface/goals/generic_air_scout_plane.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_plan_for_the_navy"
+		texturefile = "gfx/interface/goals/GER/focus_plan_for_the_navy.dds"
+	}
 }
