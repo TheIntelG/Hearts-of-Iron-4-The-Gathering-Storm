@@ -19,3 +19,9 @@
 ## NAVAL PATHS ##
  GER_plan_for_the_navy:0 "Plan For The Navy"
  GER_plan_for_the_navy_desc:0 "Our navy is just a shadow of what it once was. We must rebuild it to contend with other naval powers. The question remains what form will our navy take."
+ GER_base_strike:0 "Base Strike"
+ GER_base_strike_desc:0 "We have invested our research and dockyards into constructing enough battleships and carriers. Now it is time to train our admirals how to utilize these battleships & carriers in proper naval engagements."
+ GER_carrier_construction_optimization:0 "Carrier Construction Optimization"
+ GER_carrier_construction_optimization_desc:0 "In order for us to effectively and at a steady pase build our carriers we are required to optimize our ship building."
+ GER_fleet_in_being:0 "Fleet in Being"
+ GER_fleet_in_being_desc:0 "In addition to the High Seas Fleet rebuilding program our admirals must undergo training to command such a grand fleet as it has been decades since someone had to command so many ships."

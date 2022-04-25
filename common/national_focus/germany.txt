@@ -4970,6 +4970,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_naval_effort
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			GER = {
 				country_event = tgs_germany.2
@@ -5000,10 +5001,10 @@ focus_tree = {
 			navy_experience = 50
 			every_state = {
 				limit = { has_state_flag = GER_plan_z_dockyards }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -5066,6 +5067,49 @@ focus_tree = {
 				uses = 1
 				category = cv_tech
 			}
+		}
+	}
+
+	focus = {
+		id = GER_base_strike
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = GER_plan_z }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = GER_plan_z
+		ai_will_do = {
+			factor = 1
+		}
+			
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = GER_base_strike
+				cost_reduction = 0.25
+				uses = 2
+				category = base_strike_main
+			}
+		}
+	}
+
+	focus = {
+		id = GER_carrier_construction_optimization
+		icon = GFX_focus_naval_industry
+		prerequisite = { focus = GER_base_strike }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = GER_base_strike
+		ai_will_do = {
+			factor = 1
+		}
+			
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = GER_carrier_optimization
 		}
 	}
 
@@ -6444,6 +6488,30 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_fleet_in_being
+		icon = GFX_focus_generic_large_fleet
+		prerequisite = { focus = GER_rebuild_the_high_seas_fleet }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = GER_rebuild_the_high_seas_fleet
+		ai_will_do = {
+			factor = 1
+		}
+			
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = GER_base_strike
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
 		id = GER_our_place_in_the_sun
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = GER_focus_on_the_true_enemy }
@@ -6497,7 +6565,7 @@ focus_tree = {
 	focus = {
 		id = GER_pride_of_the_modern_germany
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = GER_rebuild_the_high_seas_fleet }
+		prerequisite = { focus = GER_fleet_in_being }
 		available = {
 			is_subject = no
 		}
@@ -6794,7 +6862,7 @@ focus_tree = {
 	focus = {
 		id = GER_crossing_the_atlantic
 		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = GER_plan_z focus = GER_modular_construction focus = GER_pride_of_the_modern_germany }
+		prerequisite = { focus = GER_carrier_construction_optimization focus = GER_modular_construction focus = GER_pride_of_the_modern_germany }
 		available = {
 			is_subject = no
 			has_war_with = USA

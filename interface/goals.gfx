@@ -3011,4 +3011,14 @@ spriteTypes = {
 		name = "GFX_focus_plan_for_the_navy"
 		texturefile = "gfx/interface/goals/GER/focus_plan_for_the_navy.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_naval_industry"
+		texturefile = "gfx/interface/goals/focus_naval_industry.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_large_fleet"
+		texturefile = "gfx/interface/goals/focus_generic_large_fleet.dds"
+	}
 }

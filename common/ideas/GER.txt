@@ -928,6 +928,26 @@ ideas = {
 			}
 		}
 
+		GER_carrier_optimization = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_navy_carrier_bonus
+
+			equipment_bonus = {
+				carrier = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
 		GER_FIN_industrial_support = {
 			allowed = {
 				always = no

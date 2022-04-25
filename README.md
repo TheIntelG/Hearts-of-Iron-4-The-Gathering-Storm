@@ -1,4 +1,6 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.2:
+ - Reworked German Navy Focus Tree
 ## BETA 0.0.1:
  - Reworked German Air Focus Tree
  - Made Rhineland & Oppose Hitler event based
