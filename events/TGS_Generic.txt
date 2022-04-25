@@ -91,17 +91,3 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = tgs_generic.2
-	title = tgs_generic.2.t
-	desc = tgs_generic.2.d
-	picture = GFX_report_event_ast_navy
-
-	is_triggered_only = yes
-
-# 	option = {
-# 		name = tgs_germany.2.a
-# 		complete_national_focus = GER_u_boat_effort
-# 	}
-}

@@ -1,0 +1,17 @@
+﻿l_english:
+# GENERIC EVENTS #
+ tgs_generic.1.t:0 "Air Doctorine Focus"
+ tgs_generic.1.d:0 "It has been well established that dominance of the air can win wars. To do so effectively we must sacrifice one part of the air branch to boost another. Our Chief of the Airforce has proposed 3 doctrine focuses for us. Strategic Destruction, focus on bombing enemy's factories, Battlefield Support, focus on supporting our ground forces via air power, and Operational Integrity, focus on tactical bombers to provide us with both."
+ tgs_generic.1.a:0 "Strategic Destruction"
+ tgs_generic.1.b:0 "Battlefield Support"
+ tgs_generic.1.c:0 "Operational Integrity"
+# GERMANY EVENTS #
+ tgs_germany.1.t:0 "The Rhineland Question"
+ tgs_germany.1.d:0 "For far too long has the German Rhineland remained demiliterized. We must prepare to send several German divisions into the Rhineland, marking it the first time since the end of the Great War that our forces will position west of the river Rhine. This will be in clear violation of the Versailles Treaty but we don't expect much opposition."
+ tgs_germany.1.a:0 "Send in the troops! (Historical)"
+ tgs_germany.1.b:0 "We must oppose Hitler! (Civil War)"
+ tgs_germany.2.t:0 "Plan For The Navy"
+ tgs_germany.2.d:0 "During the Great War our navy was comprised of dreadnoughts, battlecruisers, cruisers, battleships and u-boats. Now, thanks to the Treaty of Versailles, the German navy is but a fraction of its might. Our Chief of Navy has proposed a few ideas how we can rebuild our navy to contend with the regional naval powers."
+ tgs_germany.2.a:0 "Focus on Trade Interdiction"
+ tgs_germany.2.b:0 "Focus on Base Strike"
+ tgs_germany.2.c:0 "Focus on Fleet in Being"

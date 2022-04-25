@@ -1,0 +1,21 @@
+﻿l_english:
+# GERMANY FOCUS TREE #
+## POLITICAL PATHS ##
+ GER_rhineland_question:0 "The Rhineland Question"
+ GER_rhineland_question_desc:0 "There have been reports that the Führer [GER.GetLeader] is planning to remiliterize the Rhineland. If this is allowed to happen this would be the 2nd time we break the Treaty of Versailles and some Kayser loyalists might oppose this move by igniting a civil war. Let's just hope that they don't have the guts to oppose our Führer"
+### NAZI REICH - ADOLF HITLER ###
+ GER_remiliterize_the_rhineland:0 "Remiliterize the Rhineland"
+ GER_remiliterize_the_rhineland_desc:0 "The Rhineland has been demilitarized since the end of the Great War, but this insult shall stand no longer! Germany is a sovereign nation and is free to move troops anywhere within her borders!"
+### GERMAN MILITARY JUNTA ###
+ GER_establish_military_dictatorship:0 "Establish Military Dictatorship"
+ GER_establish_military_dictatorship_desc:0 "In light of the recent civil war against Hitler and his fascist followers, the military has decided to stay in power as the head of the government. With this it should be much easier to root out any remaining fascists or Hitler sympathizers."
+## AIR PATHS ##
+ GER_air_theory_research:0 "Air Theory Research"
+ GER_air_theory_research_desc:0 "§RThe Doctorine bonus is determined by your current doctorine!§! \n\n In order to ensure our victory in the air we must advance our knowledge on aerial warfare theories to gain an edge over our enemies."
+ GER_fighter_effort:0 "Fighter Focus"
+ GER_fighter_effort_desc:0 "Our skies require full aerial superiority to ensure no enemy aircraft can bomb our factories, perform close air support or contest the air. To do so we must invest in producing more advanced fighter planes."
+ GER_scout_plane_effort:0 "Scout Plane Effort"
+ GER_scout_plane_effort_desc:0 "Information is just as crucial as a good air force. A small investment into spyplanes would be useful when gathering intel on possible bombing targets or logistics hubs."
+## NAVAL PATHS ##
+ GER_plan_for_the_navy:0 "Plan For The Navy"
+ GER_plan_for_the_navy_desc:0 "Our navy is just a shadow of what it once was. We must rebuild it to contend with other naval powers. The question remains what form will our navy take."

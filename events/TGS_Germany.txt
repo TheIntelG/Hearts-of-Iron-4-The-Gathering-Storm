@@ -48,6 +48,7 @@ country_event = {
 				factor = 0
 			}
 		}
+		complete_national_focus = GER_remiliterize_the_rhineland
 	}
 
 	option = {
@@ -100,5 +101,47 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = GER_oppose_hitler_civil_war
+		complete_national_focus = GER_oppose_hitler
+	}
+}
+
+country_event = {
+	id = tgs_germany.2
+	title = tgs_germany.2.t
+	desc = tgs_germany.2.d
+	picture = GFX_report_event_ast_navy
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.2.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = GER_ai_behavior
+					option = DEFAULT
+				}
+				factor = 100
+			}
+		}
+		complete_national_focus = GER_u_boat_effort
+	}
+
+	option = {
+		name = tgs_germany.2.b
+		ai_chance = {
+			base = 1
+		}
+		complete_national_focus = GER_plan_z
+	}
+
+	option = {
+		name = tgs_germany.2.c
+		ai_chance = {
+			base = 1
+		}
+		complete_national_focus = GER_rebuild_the_high_seas_fleet
 	}
 }

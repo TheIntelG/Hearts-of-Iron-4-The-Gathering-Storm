@@ -2828,7 +2828,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_remiliterize_rhineland
+		id = GER_remiliterize_the_rhineland
 		icon = GFX_focus_remiliterize_rhineland
 		mutually_exclusive = { focus = GER_oppose_hitler }
 		prerequisite = { focus = GER_rhineland_question }
@@ -2848,7 +2848,7 @@ focus_tree = {
 			51 = { set_demilitarized_zone = no }
 			add_political_power = 120
 			army_experience = 5
-			add_named_threat = { threat = 5 name = GER_remiliterize_rhineland }
+			add_named_threat = { threat = 5 name = GER_remiliterize_the_rhineland }
 			custom_effect_tooltip = GER_rhineland_ultimatum
 			if = {
 				limit = { FRA = { is_subject = no } }
@@ -2863,10 +2863,10 @@ focus_tree = {
 	focus = {
 		id = GER_anti_comitern_pact
 		icon = GFX_goal_anti_comintern_pact
-		prerequisite = { focus = GER_remiliterize_rhineland  }
+		prerequisite = { focus = GER_remiliterize_the_rhineland  }
 		x = -4
 		y = 2
-		relative_position_id = GER_remiliterize_rhineland
+		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 10
 		available = {
 			is_subject = no
@@ -3053,7 +3053,7 @@ focus_tree = {
 	focus = {
 		id = GER_japan_friend
 		icon = GFX_focus_ger_befriend_japan
-		prerequisite = { focus = GER_remiliterize_rhineland }
+		prerequisite = { focus = GER_remiliterize_the_rhineland }
 		mutually_exclusive = { focus = GER_china_friend }
 		available = {
 			is_subject = no
@@ -3071,7 +3071,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = GER_remiliterize_rhineland
+		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 10
 
 		available_if_capitulated = yes
@@ -3116,7 +3116,7 @@ focus_tree = {
 		id = GER_china_friend
 		icon = GFX_focus_ger_befriend_china
 		# icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = GER_remiliterize_rhineland }
+		prerequisite = { focus = GER_remiliterize_the_rhineland }
 		mutually_exclusive = { focus = GER_japan_friend }
 		available = {
 			is_subject = no
@@ -3134,7 +3134,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = GER_remiliterize_rhineland
+		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 10
 		ai_will_do = {
 			factor = 0.5
@@ -3382,7 +3382,7 @@ focus_tree = {
 	focus = {
 		id = GER_anschluss
 		icon = GFX_focus_ger_anschluss
-		prerequisite = { focus = GER_remiliterize_rhineland }
+		prerequisite = { focus = GER_remiliterize_the_rhineland }
 		available_if_capitulated = no
 		available = {
 			is_subject = no
@@ -3399,7 +3399,7 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = 3
 		y = 1
-		relative_position_id = GER_remiliterize_rhineland
+		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -4972,7 +4972,7 @@ focus_tree = {
 		relative_position_id = GER_naval_effort
 		completion_reward = {
 			GER = {
-				country_event = tgs_generic.2
+				country_event = tgs_germany.2
 			}
 		}
 	}
@@ -5078,19 +5078,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_plan_for_the_navy
 		cost = 0
-		ai_will_do = {
-			base = 1
-			modifier = {
-				AND = {
-					is_historical_focus_on = yes
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = DEFAULT
-					}
-				}
-				factor = 100
-			}
-		}
 
 		available_if_capitulated = yes
 
@@ -6077,7 +6064,7 @@ focus_tree = {
 	focus = {
 		id = GER_oppose_hitler
 		icon = GFX_focus_ger_oppose_hitler
-		mutually_exclusive = { focus = GER_remiliterize_rhineland }
+		mutually_exclusive = { focus = GER_remiliterize_the_rhineland }
 		prerequisite = { focus = GER_rhineland_question }
 
 		allow_branch = {

@@ -5086,7 +5086,7 @@ news_event = {
 		GER = {
 			OR = {
 				has_country_flag = GER_rhineland_backed_down
-				NOT = { has_completed_focus = GER_remiliterize_rhineland }
+				NOT = { has_completed_focus = GER_remiliterize_the_rhineland }
 			}
 			has_offensive_war = yes
 		}
@@ -5261,7 +5261,7 @@ news_event = {
 		GER = {
 			OR = {
 				has_country_flag = GER_rhineland_backed_down
-				NOT = { has_completed_focus = GER_remiliterize_rhineland }
+				NOT = { has_completed_focus = GER_remiliterize_the_rhineland }
 			}
 			has_defensive_war = yes
 			NOT = { has_civil_war = yes }
