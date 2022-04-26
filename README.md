@@ -1,4 +1,8 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.3:
+ - Added German Marine research bonus focus
+ - Added German Paratrooper research bonus focus
+ - Added German Mountaineer research bonus focus
 ## BETA 0.0.2:
  - Reworked German Navy Focus Tree
 ## BETA 0.0.1:

@@ -25,3 +25,10 @@
  GER_carrier_construction_optimization_desc:0 "In order for us to effectively and at a steady pase build our carriers we are required to optimize our ship building."
  GER_fleet_in_being:0 "Fleet in Being"
  GER_fleet_in_being_desc:0 "In addition to the High Seas Fleet rebuilding program our admirals must undergo training to command such a grand fleet as it has been decades since someone had to command so many ships."
+## ARMY PATHS ##
+ GER_form_the_fallschirmjager:0 "Form the Fallschirmjäger"
+ GER_form_the_fallschirmjager_desc:0 "The Fallschirmjäger are the paratroop branch of the German Luftwaffe. They are the first German paratroopers to be committed in large-scale airborne operations. Formation of these units can be used to disrupt enemy supply lines and capture strategic key positions behind enemy lines."
+ GER_form_marine_stosstrupp_kompanie:0 "Form Marine Stoßtrupp Kompanie"
+ GER_form_marine_stosstrupp_kompanie_desc:0 "During The Great war, marine forces became instrumental in carrying out missions along the coast or capturing beach heads or islands. It is time that Germany formed its own special units for possible sea invasion operations."
+ GER_develop_gebirgsjagers:0 "Develop Gebirgsjägers"
+ GER_develop_gebirgsjagers_desc:0 "Some of our borders are along the Alps. While they make up a small portion of our border it is still a good idea to develop our Gebirgsjägers so they can better fight in this environment if the need arises."
