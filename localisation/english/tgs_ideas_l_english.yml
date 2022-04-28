@@ -1,3 +1,6 @@
 ﻿l_english:
  GER_carrier_optimization:0 "Carrier Optimization"
  GER_carrier_optimization_desc:0 "In order for us to effectively and at a steady pase build our carriers we are required to optimize our ship building"
+
+ hanomag:0 "Hanomag"
+ auto_union:0 "Auto Union"

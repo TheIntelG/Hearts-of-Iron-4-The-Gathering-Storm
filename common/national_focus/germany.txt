@@ -2315,13 +2315,11 @@ focus_tree = {
 		relative_position_id = GER_army_innovation
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-					name = paratrooper_bonus
-					bonus = 1.0
-					uses = 1
-					category = para_tech
-				}
+			add_tech_bonus = {
+				name = paratrooper_bonus
+				bonus = 1.0
+				uses = 1
+				category = para_tech
 			}
 		}
 	}
@@ -2339,14 +2337,59 @@ focus_tree = {
 		relative_position_id = GER_army_innovation
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-					name = mountaineers_bonus
-					bonus = 0.5
-					uses = 1
-					category = mountaineers_tech
-				}
+			add_tech_bonus = {
+				name = mountaineers_bonus
+				bonus = 0.5
+				uses = 1
+				category = mountaineers_tech
 			}
+		}
+	}
+
+	focus = {
+		id = GER_repurpose_hanomag
+		prerequisite = { focus = GER_army_innovation }
+		icon = GFX_focus_ger_repurpose_hanomag
+		cost = 5
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_army_innovation
+		completion_reward = {
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = hanomag
+		}
+	}
+
+	focus = {
+		id = GER_encourage_auto_union_development
+		prerequisite = { focus = GER_repurpose_hanomag }
+		icon = GFX_focus_ger_encourage_auto_union_development
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_repurpose_hanomag
+		completion_reward = {
+			add_tech_bonus = {
+				name = armored_car_bonus
+				bonus = 1
+				uses = 1
+				technology = armored_car2
+				technology = armored_car3
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = auto_union
 		}
 	}
 
@@ -2583,8 +2626,8 @@ focus_tree = {
 			}
 		}
 
-		x = 0
-		y = 2
+		x = -2
+		y = 1
 		relative_position_id = GER_army_innovation
 		cost = 10
 		ai_will_do = {
@@ -4953,13 +4996,11 @@ focus_tree = {
 		relative_position_id = GER_naval_effort
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-					name = marine_bonus
-					bonus = 1.0
-					uses = 1
-					category = marine_tech
-				}
+			add_tech_bonus = {
+				name = marine_bonus
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
 			}
 		}
 	}

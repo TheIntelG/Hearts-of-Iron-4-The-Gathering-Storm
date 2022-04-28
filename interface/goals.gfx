@@ -3031,4 +3031,14 @@ spriteTypes = {
 		name = "GFX_focus_generic_mountain_warfare"
 		texturefile = "gfx/interface/goals/focus_generic_mountain_warfare.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_repurpose_hanomag"
+		texturefile = "gfx/interface/goals/GER/focus_ger_repurpose_hanomag.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_encourage_auto_union_development"
+		texturefile = "gfx/interface/goals/GER/focus_ger_encourage_auto_union_development.dds"
+	}
 }

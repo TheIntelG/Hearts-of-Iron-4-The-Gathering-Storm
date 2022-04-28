@@ -1,4 +1,9 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.4:
+ - Added German Mechanized research bonus focus
+ - Added German Mechanized manufacturer company
+ - Added German Armored car research bonus focus
+ - Added German Armored car manufacturer company
 ## BETA 0.0.3:
  - Added German Marine research bonus focus
  - Added German Paratrooper research bonus focus
