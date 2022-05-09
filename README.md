@@ -1,4 +1,6 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.5:
+ - Reworked German Air Focus Tree GFX
 ## BETA 0.0.4:
  - Added German Mechanized research bonus focus
  - Added German Mechanized manufacturer company

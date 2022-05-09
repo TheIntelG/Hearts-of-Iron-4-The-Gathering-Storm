@@ -2194,7 +2194,7 @@ focus_tree = {
 	focus = {
 		id = GER_air_innovation
 		text = air_innovation
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_generic_air_innovation_1
 		x = 8
 		y = 0
 		relative_position_id = GER_army_innovation
@@ -2357,6 +2357,7 @@ focus_tree = {
 			factor = 0.2
 		}
 		relative_position_id = GER_army_innovation
+		search_filters = { FOCUS_FILTER_RESEARCH } 
 		completion_reward = {
 			add_tech_bonus = {
 				name = mechanized_bonus
@@ -2380,6 +2381,7 @@ focus_tree = {
 			factor = 0.2
 		}
 		relative_position_id = GER_repurpose_hanomag
+		search_filters = { FOCUS_FILTER_RESEARCH } 
 		completion_reward = {
 			add_tech_bonus = {
 				name = armored_car_bonus
@@ -2393,9 +2395,28 @@ focus_tree = {
 		}
 	}
 
+	# focus = {
+	# 	id = GER_infantry_weapon_improvement
+	# 	# icon = 
+	# 	prerequisite = { focus = GER_army_innovation }
+	# 	cost = 10
+	# 	x = 0
+	# 	y = 2
+	# 	relative_position_id = GER_army_innovation
+	# 	search_filters = { FOCUS_FILTER_RESEARCH } 
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = GER_infantry_weapon_improvement
+	# 			bonus = 0.5
+	# 			uses = 1
+	# 			category = infantry_weapons
+	# 		}
+	# 	}
+	# }
+
 	focus = {
 		id = GER_air_theory_research
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_generic_air_doctorine
 		prerequisite = { focus = GER_air_innovation }
 		cost = 5
 		ai_will_do = {
@@ -2404,6 +2425,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_air_innovation
+
+		available = {
+			OR = {
+				has_tech = formation_flying
+				has_tech = air_superiority
+				has_tech = force_rotation
+			}
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2452,7 +2481,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_strategic_air_effort
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_generic_air_strategic_bomber
 		prerequisite = { focus = GER_air_innovation }
 		mutually_exclusive = { focus = GER_tactical_air_effort }
 		x = 1
@@ -2508,7 +2537,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_fighter_effort
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_generic_air_fighter
 		prerequisite = { focus = GER_air_innovation }
 		mutually_exclusive = { focus = GER_long_range_escorts }
 		cost = 10
@@ -2533,7 +2562,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_long_range_escorts
-		icon = GFX_focus_usa_escort_fighters
+		icon = GFX_focus_generic_air_heavy_fighter
 		prerequisite = { focus = GER_air_innovation }
 		mutually_exclusive = { focus = GER_fighter_effort }
 		x = 2
@@ -2558,7 +2587,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_scout_plane_effort
-		icon = GFX_focus_generic_air_scout_plane
+		icon = GFX_focus_generic_air_scout
 		prerequisite = { focus = GER_air_innovation }
 		x = -2
 		y = 1
@@ -2584,7 +2613,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_air_effort
 		text = naval_air_effort
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_focus_generic_naval_air_effort
 		prerequisite = { focus = GER_air_innovation }
 		x = 2
 		y = 1
@@ -2764,7 +2793,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_air_innovation_2
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_focus_generic_air_fighter2
 		prerequisite = {
 			focus = GER_fighter_effort
 			focus = GER_long_range_escorts
@@ -2859,7 +2888,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rocketry_focus
-		icon = GFX_focus_rocketry
+		icon = GFX_focus_generic_rocket_tech
 		prerequisite = { focus = GER_air_innovation_2 }
 		x = 1
 		y = 1
@@ -2890,7 +2919,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe
-		icon = GFX_focus_wonderweapons
+		icon = GFX_focus_generic_nuclear_weapon
 		prerequisite = { focus = GER_air_innovation_2 }
 		x = -1
 		y = 1

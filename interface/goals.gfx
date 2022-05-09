@@ -2977,6 +2977,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_SOV_approach_semyonov.dds"
 	}
 
+	# THE GATHERING STORM GOALS
+
 	SpriteType = { 
 		name = "GFX_focus_rhineland_question"
 		texturefile = "gfx/interface/goals/GER/focus_rhineland_question.dds"
@@ -2995,16 +2997,6 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_ger_befriend_japan"
 		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_japan.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_focus_generic_air_tactical_bomber"
-		texturefile = "gfx/interface/goals/generic_air_tactical_bomber.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_focus_generic_air_scout_plane"
-		texturefile = "gfx/interface/goals/generic_air_scout_plane.dds"
 	}
 
 	SpriteType = { 
@@ -3040,5 +3032,60 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_ger_encourage_auto_union_development"
 		texturefile = "gfx/interface/goals/GER/focus_ger_encourage_auto_union_development.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_innovation_1"
+		texturefile = "gfx/interface/goals/focus_generic_air_innovation_1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_doctorine"
+		texturefile = "gfx/interface/goals/focus_generic_air_doctorine.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_air_effort"
+		texturefile = "gfx/interface/goals/focus_generic_naval_air_effort.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_tactical_bomber"
+		texturefile = "gfx/interface/goals/focus_generic_air_tactical_bomber.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_strategic_bomber"
+		texturefile = "gfx/interface/goals/focus_generic_air_strategic_bomber.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_heavy_fighter"
+		texturefile = "gfx/interface/goals/focus_generic_air_heavy_fighter.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_fighter"
+		texturefile = "gfx/interface/goals/focus_generic_air_fighter.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_scout"
+		texturefile = "gfx/interface/goals/focus_generic_air_scout.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_fighter2"
+		texturefile = "gfx/interface/goals/focus_generic_air_fighter2.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_nuclear_weapon"
+		texturefile = "gfx/interface/goals/focus_generic_nuclear_weapon.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_rocket_tech"
+		texturefile = "gfx/interface/goals/focus_generic_rocket_tech.dds"
 	}
 }
