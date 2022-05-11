@@ -2980,13 +2980,13 @@ spriteTypes = {
 	# THE GATHERING STORM GOALS
 
 	SpriteType = { 
-		name = "GFX_focus_rhineland_question"
-		texturefile = "gfx/interface/goals/GER/focus_rhineland_question.dds"
+		name = "GFX_focus_ger_rhineland_question"
+		texturefile = "gfx/interface/goals/GER/focus_ger_rhineland_question.dds"
 	}
 
 	SpriteType = { 
-		name = "GFX_focus_remiliterize_rhineland"
-		texturefile = "gfx/interface/goals/GER/focus_remiliterize_rhineland.dds"
+		name = "GFX_focus_ger_remiliterize_rhineland"
+		texturefile = "gfx/interface/goals/GER/focus_ger_remiliterize_rhineland.dds"
 	}
 
 	SpriteType = { 
@@ -3152,5 +3152,35 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_generic_mountaineers"
 		texturefile = "gfx/interface/goals/focus_generic_mountaineers.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_support_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_army_support_equipment.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_infantry_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_army_infantry_equipment.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_anti-tank"
+		texturefile = "gfx/interface/goals/focus_generic_army_anti-tank.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_anti-air"
+		texturefile = "gfx/interface/goals/focus_generic_army_anti-air.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_artillery"
+		texturefile = "gfx/interface/goals/focus_generic_army_artillery.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_wunderpanzer"
+		texturefile = "gfx/interface/goals/GER/focus_ger_wunderpanzer.dds"
 	}
 }

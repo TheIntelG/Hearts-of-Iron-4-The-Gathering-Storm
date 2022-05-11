@@ -27,10 +27,10 @@ focus_tree = {
 
 	focus = {
 		id = GER_rhineland_question
-		icon = GFX_focus_rhineland_question
+		icon = GFX_focus_ger_rhineland_question
 		x = 16
 		y = 0
-		cost = 10
+		cost = 5
 		available = {
 			is_subject = no
 		}
@@ -2385,30 +2385,148 @@ focus_tree = {
 				name = armored_car_bonus
 				bonus = 1
 				uses = 1
-				technology = armored_car2
-				technology = armored_car3
+				category = cat_armored_car_equipment
 			}
 		}
 	}
 
-	# focus = {
-	# 	id = GER_infantry_weapon_improvement
-	# 	# icon = 
-	# 	prerequisite = { focus = GER_army_innovation }
-	# 	cost = 10
-	# 	x = 0
-	# 	y = 2
-	# 	relative_position_id = GER_army_innovation
-	# 	search_filters = { FOCUS_FILTER_RESEARCH } 
-	# 	completion_reward = {
-	# 		add_tech_bonus = {
-	# 			name = GER_infantry_weapon_improvement
-	# 			bonus = 0.5
-	# 			uses = 1
-	# 			category = infantry_weapons
-	# 		}
-	# 	}
-	# }
+	focus = {
+		id = GER_support_equipment_effort
+		icon = GFX_focus_generic_army_support_equipment
+		prerequisite = { focus = GER_army_innovation }
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_army_innovation
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_infantry_weapon_improvement
+				bonus = 1.0
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GER_infantry_weapon_improvement
+		icon = GFX_focus_generic_army_infantry_equipment
+		prerequisite = { focus = GER_support_equipment_effort }
+		cost = 10
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_support_equipment_effort
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_infantry_weapon_improvement
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = GER_anti_tank_effort
+		icon = GFX_focus_generic_army_anti-tank
+		prerequisite = { focus = GER_infantry_weapon_improvement }
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_infantry_weapon_improvement
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_anti_tank_effort
+				bonus = 1.0
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	focus = {
+		id = GER_wunderpanzer
+		icon = GFX_focus_ger_wunderpanzer
+		prerequisite = { focus = GER_anti_tank_effort }
+		prerequisite = { focus = GER_army_innovation_2 }
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 0.1
+		}
+		relative_position_id = GER_anti_tank_effort
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+
+		available = {
+			date > 1943.1.1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_wunderpanzer
+				bonus = 1.0
+				uses = 1
+				category = cat_super_heavy_armor
+			}
+		}
+	}
+
+	focus = {
+		id = GER_anti_air_effort
+		icon = GFX_focus_generic_army_anti-air
+		prerequisite = { focus = GER_infantry_weapon_improvement }
+		cost = 5
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_infantry_weapon_improvement
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_anti_air_effort
+				bonus = 1.0
+				uses = 1
+				category = cat_anti_air
+			}
+		}
+	}
+
+	focus = {
+		id = GER_artillery_effort
+		icon = GFX_focus_generic_army_artillery
+		prerequisite = { focus = GER_infantry_weapon_improvement }
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 0.2
+		}
+		relative_position_id = GER_infantry_weapon_improvement
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_artillery_effort
+				bonus = 1.0
+				uses = 1
+				category = cat_artillery
+			}
+		}
+	}
 
 	focus = {
 		id = GER_air_theory_research
@@ -2424,9 +2542,9 @@ focus_tree = {
 
 		available = {
 			OR = {
-				has_tech = formation_flying
-				has_tech = air_superiority
-				has_tech = force_rotation
+				has_country_flag = generic_battlefield_support_flag
+				has_country_flag = generic_strategic_destruction_flag
+				has_country_flag = generic_operational_integrity_flag
 			}
 		}
 
@@ -2435,8 +2553,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					tag = GER
-					has_tech = formation_flying
+					has_country_flag = generic_battlefield_support
 				}
 
 				add_doctrine_cost_reduction = {
@@ -2448,8 +2565,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					tag = GER
-					has_tech = air_superiority
+					has_country_flag = generic_strategic_destruction
 				}
 
 				add_doctrine_cost_reduction = {
@@ -2461,8 +2577,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					tag = GER
-					has_tech = force_rotation
+					has_country_flag = generic_operational_integrity
 				}
 
 				add_doctrine_cost_reduction = {
@@ -2652,7 +2767,7 @@ focus_tree = {
 		}
 
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = GER_army_innovation
 		cost = 10
 		ai_will_do = {
@@ -2834,7 +2949,7 @@ focus_tree = {
 		icon = GFX_focus_generic_army_tanks
 		prerequisite = { focus = GER_soviet_treaty }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_soviet_treaty
 		cost = 10
 		ai_will_do = {
@@ -2940,15 +3055,15 @@ focus_tree = {
 
 	focus = {
 		id = GER_remiliterize_the_rhineland
-		icon = GFX_focus_remiliterize_rhineland
+		icon = GFX_focus_ger_remiliterize_rhineland
 		mutually_exclusive = { focus = GER_oppose_hitler }
 		prerequisite = { focus = GER_rhineland_question }
 		relative_position_id = GER_rhineland_question
 		x = -9
 		y = 1
-		cost = 0
+		cost = 5
 		available = {
-			hidden_trigger = { always = no }
+			has_country_flag = GER_remiliterize_the_rhineland_flag
 		}
 		ai_will_do = {
 			factor = 10
@@ -5100,7 +5215,7 @@ focus_tree = {
 		id = GER_plan_for_the_navy
 		icon = GFX_focus_generic_naval_plan
 		prerequisite = { focus = GER_naval_effort }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = GER_naval_effort
@@ -5120,13 +5235,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_plan_for_the_navy
-		cost = 0
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
 
 		available = {
-			hidden_trigger = { always = no }
+			has_country_flag = GER_plan_z_flag
 		}
 
 		available_if_capitulated = yes
@@ -5255,12 +5370,12 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_plan_for_the_navy
-		cost = 0
+		cost = 5
 
 		available_if_capitulated = yes
 
 		available = {
-			hidden_trigger = { always = no }
+			has_country_flag = GER_u_boat_effort_flag
 		}
 
 		complete_tooltip = {
@@ -6250,12 +6365,12 @@ focus_tree = {
 		}
 
 		available = {
-			hidden_trigger = { always = no }
+			has_country_flag = GER_oppose_hitler_flag
 		}
 		x = 9
 		y = 1
 		relative_position_id = GER_rhineland_question
-		cost = 0
+		cost = 5
 		ai_will_do = {
 			factor = 7
 		}
@@ -6548,12 +6663,12 @@ focus_tree = {
 		}
 
 		available = {
-			hidden_trigger = { always = no }
+			has_country_flag = GER_rebuild_the_high_seas_fleet_flag
 		}
 		x = -2
 		y = 1
 		relative_position_id = GER_plan_for_the_navy
-		cost = 0
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

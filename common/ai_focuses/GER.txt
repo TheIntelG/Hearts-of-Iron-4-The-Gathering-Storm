@@ -5,6 +5,7 @@ ai_historical_focus_list_GER = {
 		GER_around_maginot
 
 		GER_rhineland_question
+		GER_remiliterize_the_rhineland
 		GER_four_year_plan
 		GER_west_wall
 		GER_autarky

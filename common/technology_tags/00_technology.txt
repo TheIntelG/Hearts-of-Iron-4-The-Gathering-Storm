@@ -9,13 +9,16 @@ technology_categories = {
 	cat_light_armor
 	cat_medium_armor
 	cat_heavy_armor
+	cat_super_heavy_armor
 	artillery
 	cat_anti_tank
 	cat_anti_air
+	cat_artillery
 	naval_air
 	infantry_weapons
 	motorized_equipment
 	cat_mechanized_equipment
+	cat_armored_car_equipment
 	naval_equipment
 	rocketry
 	nuclear

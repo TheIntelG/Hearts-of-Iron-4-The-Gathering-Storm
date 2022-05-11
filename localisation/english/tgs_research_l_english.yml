@@ -1,2 +1,5 @@
 ﻿l_english:
  cat_scout_plane:0 "Scout Plane models"
+ cat_artillery:0 "Artillery"
+ cat_armored_car_equipment:0 "Armored Car models"
+ cat_super_heavy_armor:0 "Super Heavy Tank models"

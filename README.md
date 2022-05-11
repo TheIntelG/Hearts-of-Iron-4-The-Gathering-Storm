@@ -1,4 +1,6 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.7:
+ - Reworked German Army Focus Tree
 ## BETA 0.0.6:
  - Reworked German Naval Focus Tree GFX
  - Reworked German Army Focus Tree GFX

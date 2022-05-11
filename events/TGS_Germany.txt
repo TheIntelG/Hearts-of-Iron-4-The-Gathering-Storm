@@ -48,7 +48,7 @@ country_event = {
 				factor = 0
 			}
 		}
-		complete_national_focus = GER_remiliterize_the_rhineland
+		set_country_flag = GER_remiliterize_the_rhineland_flag
 	}
 
 	option = {
@@ -101,10 +101,11 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = GER_oppose_hitler_civil_war
-		complete_national_focus = GER_oppose_hitler
+		set_country_flag = GER_oppose_hitler_flag
 	}
 }
 
+# PLAN FOR THE NAVY
 country_event = {
 	id = tgs_germany.2
 	title = tgs_germany.2.t
@@ -126,7 +127,7 @@ country_event = {
 				factor = 100
 			}
 		}
-		complete_national_focus = GER_u_boat_effort
+		set_country_flag = GER_u_boat_effort_flag
 	}
 
 	option = {
@@ -134,7 +135,7 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
-		complete_national_focus = GER_plan_z
+		set_country_flag = GER_plan_z_flag
 	}
 
 	option = {
@@ -142,6 +143,6 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
-		complete_national_focus = GER_rebuild_the_high_seas_fleet
+		set_country_flag = GER_rebuild_the_high_seas_fleet_flag
 	}
 }

@@ -27,6 +27,7 @@ German_alternate_kaiser = {
 
 	ai_national_focuses = {
 		GER_rhineland_question
+		GER_oppose_hitler
 		GER_secure_the_new_state
 		GER_revive_the_kaiserreich
 		GER_rebuild_the_nation
@@ -119,6 +120,7 @@ German_alternate_democratic = {
 
 	ai_national_focuses = {
 		GER_rhineland_question
+		GER_oppose_hitler
 		GER_secure_the_new_state
 		GER_reestablish_free_elections
 		GER_rebuild_the_nation
