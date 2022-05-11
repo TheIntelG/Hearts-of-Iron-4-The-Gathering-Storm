@@ -3000,33 +3000,13 @@ spriteTypes = {
 	}
 
 	SpriteType = { 
-		name = "GFX_focus_plan_for_the_navy"
-		texturefile = "gfx/interface/goals/GER/focus_plan_for_the_navy.dds"
+		name = "GFX_focus_generic_naval_plan"
+		texturefile = "gfx/interface/goals/focus_generic_naval_plan.dds"
 	}
 
 	SpriteType = { 
-		name = "GFX_focus_naval_industry"
-		texturefile = "gfx/interface/goals/focus_naval_industry.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_focus_generic_large_fleet"
-		texturefile = "gfx/interface/goals/focus_generic_large_fleet.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_focus_generic_marines"
-		texturefile = "gfx/interface/goals/focus_generic_marines.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_focus_generic_mountain_warfare"
-		texturefile = "gfx/interface/goals/focus_generic_mountain_warfare.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_focus_ger_repurpose_hanomag"
-		texturefile = "gfx/interface/goals/GER/focus_ger_repurpose_hanomag.dds"
+		name = "GFX_focus_ger_commission_hanomag"
+		texturefile = "gfx/interface/goals/GER/focus_ger_commission_hanomag.dds"
 	}
 
 	SpriteType = { 
@@ -3087,5 +3067,90 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_generic_rocket_tech"
 		texturefile = "gfx/interface/goals/focus_generic_rocket_tech.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_innovation_1"
+		texturefile = "gfx/interface/goals/focus_generic_naval_innovation_1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_doctorine"
+		texturefile = "gfx/interface/goals/focus_generic_naval_doctorine.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_paratroopers"
+		texturefile = "gfx/interface/goals/focus_generic_paratroopers.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_construct_naval_dockyard"
+		texturefile = "gfx/interface/goals/focus_generic_construct_naval_dockyard.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_marines"
+		texturefile = "gfx/interface/goals/focus_generic_marines.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_submarine"
+		texturefile = "gfx/interface/goals/focus_generic_naval_submarine.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_wolf_pack"
+		texturefile = "gfx/interface/goals/GER/focus_ger_wolf_pack.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_submarine_production"
+		texturefile = "gfx/interface/goals/focus_generic_naval_submarine_production.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_battleship"
+		texturefile = "gfx/interface/goals/focus_generic_naval_battleship.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_doctorine1"
+		texturefile = "gfx/interface/goals/focus_generic_naval_doctorine1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_doctorine2"
+		texturefile = "gfx/interface/goals/focus_generic_naval_doctorine2.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_carrier_production"
+		texturefile = "gfx/interface/goals/focus_generic_naval_carrier_production.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_battleship_production"
+		texturefile = "gfx/interface/goals/focus_generic_naval_battleship_production.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_innovation_axis"
+		texturefile = "gfx/interface/goals/focus_generic_army_innovation_axis.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_research_agreement"
+		texturefile = "gfx/interface/goals/focus_generic_research_agreement.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_tanks"
+		texturefile = "gfx/interface/goals/focus_generic_army_tanks.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_mountaineers"
+		texturefile = "gfx/interface/goals/focus_generic_mountaineers.dds"
 	}
 }
