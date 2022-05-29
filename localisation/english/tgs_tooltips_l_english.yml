@@ -1,0 +1,4 @@
+﻿l_english:
+# TOOL TIPS #
+## GERMANY ##
+ GER_invest_in_china_tt:0 "Allows [GER.GetNameDef] to invest in [CHI.GetName]"

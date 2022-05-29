@@ -1,0 +1,263 @@
+spriteTypes = {	
+	# THE GATHERING STORM GOALS
+
+	SpriteType = { 
+		name = "GFX_focus_ger_rhineland_question"
+		texturefile = "gfx/interface/goals/GER/focus_ger_rhineland_question.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_remiliterize_rhineland"
+		texturefile = "gfx/interface/goals/GER/focus_ger_remiliterize_rhineland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_china"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_china.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_japan"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_japan.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_plan"
+		texturefile = "gfx/interface/goals/focus_generic_naval_plan.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_commission_hanomag"
+		texturefile = "gfx/interface/goals/GER/focus_ger_commission_hanomag.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_encourage_auto_union_development"
+		texturefile = "gfx/interface/goals/GER/focus_ger_encourage_auto_union_development.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_innovation_1"
+		texturefile = "gfx/interface/goals/focus_generic_air_innovation_1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_doctorine"
+		texturefile = "gfx/interface/goals/focus_generic_air_doctorine.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_air_effort"
+		texturefile = "gfx/interface/goals/focus_generic_naval_air_effort.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_tactical_bomber"
+		texturefile = "gfx/interface/goals/focus_generic_air_tactical_bomber.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_strategic_bomber"
+		texturefile = "gfx/interface/goals/focus_generic_air_strategic_bomber.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_heavy_fighter"
+		texturefile = "gfx/interface/goals/focus_generic_air_heavy_fighter.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_fighter"
+		texturefile = "gfx/interface/goals/focus_generic_air_fighter.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_scout"
+		texturefile = "gfx/interface/goals/focus_generic_air_scout.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_air_fighter2"
+		texturefile = "gfx/interface/goals/focus_generic_air_fighter2.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_nuclear_weapon"
+		texturefile = "gfx/interface/goals/focus_generic_nuclear_weapon.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_rocket_tech"
+		texturefile = "gfx/interface/goals/focus_generic_rocket_tech.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_innovation_1"
+		texturefile = "gfx/interface/goals/focus_generic_naval_innovation_1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_doctorine"
+		texturefile = "gfx/interface/goals/focus_generic_naval_doctorine.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_paratroopers"
+		texturefile = "gfx/interface/goals/focus_generic_paratroopers.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_construct_naval_dockyard"
+		texturefile = "gfx/interface/goals/focus_generic_construct_naval_dockyard.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_marines"
+		texturefile = "gfx/interface/goals/focus_generic_marines.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_submarine"
+		texturefile = "gfx/interface/goals/focus_generic_naval_submarine.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_wolf_pack"
+		texturefile = "gfx/interface/goals/GER/focus_ger_wolf_pack.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_submarine_production"
+		texturefile = "gfx/interface/goals/focus_generic_naval_submarine_production.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_battleship"
+		texturefile = "gfx/interface/goals/focus_generic_naval_battleship.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_doctorine1"
+		texturefile = "gfx/interface/goals/focus_generic_naval_doctorine1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_doctorine2"
+		texturefile = "gfx/interface/goals/focus_generic_naval_doctorine2.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_carrier_production"
+		texturefile = "gfx/interface/goals/focus_generic_naval_carrier_production.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_naval_battleship_production"
+		texturefile = "gfx/interface/goals/focus_generic_naval_battleship_production.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_innovation_axis"
+		texturefile = "gfx/interface/goals/focus_generic_army_innovation_axis.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_research_agreement"
+		texturefile = "gfx/interface/goals/focus_generic_research_agreement.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_tanks"
+		texturefile = "gfx/interface/goals/focus_generic_army_tanks.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_mountaineers"
+		texturefile = "gfx/interface/goals/focus_generic_mountaineers.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_support_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_army_support_equipment.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_infantry_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_army_infantry_equipment.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_anti-tank"
+		texturefile = "gfx/interface/goals/focus_generic_army_anti-tank.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_anti-air"
+		texturefile = "gfx/interface/goals/focus_generic_army_anti-air.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_army_artillery"
+		texturefile = "gfx/interface/goals/focus_generic_army_artillery.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_wunderpanzer"
+		texturefile = "gfx/interface/goals/GER/focus_ger_wunderpanzer.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_anti_comintern_pact"
+		texturefile = "gfx/interface/goals/GER/focus_ger_anti_comintern_pact.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_anti_soviet_pact"
+		texturefile = "gfx/interface/goals/GER/focus_ger_anti_soviet_pact.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_molotov_ribbentrop_pact"
+		texturefile = "gfx/interface/goals/GER/focus_ger_molotov_ribbentrop_pact.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_ally_soviet_union"
+		texturefile = "gfx/interface/goals/GER/focus_ger_ally_soviet_union.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_puppet_turkey"
+		texturefile = "gfx/interface/goals/GER/focus_ger_puppet_turkey.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_war_with_ussr"
+		texturefile = "gfx/interface/goals/GER/focus_ger_war_with_ussr.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_operation_gertrud"
+		texturefile = "gfx/interface/goals/GER/focus_ger_operation_gertrud.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_turkey"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_turkey.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_ally_turkey"
+		texturefile = "gfx/interface/goals/GER/focus_ger_ally_turkey.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_invest_in_china"
+		texturefile = "gfx/interface/goals/GER/focus_ger_invest_in_china.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_china_ally"
+		texturefile = "gfx/interface/goals/GER/focus_ger_china_ally.dds"
+	}
+}

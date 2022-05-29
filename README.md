@@ -1,4 +1,12 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.8:
+ - Redid some German Hitler path focus GFX
+ - Added German Focus to invite Turkey to Axis
+ - Added German Focus to invade Turkey if they are in Allies (Operation Gertrud)
+ - Added 20 Adolf Hitler quotes
+ - Expanded Befriend China path
+ - Added decisions for Germany to invest in China if they agree
+ - Added German event pictures
 ## BETA 0.0.7:
  - Reworked German Army Focus Tree
 ## BETA 0.0.6:

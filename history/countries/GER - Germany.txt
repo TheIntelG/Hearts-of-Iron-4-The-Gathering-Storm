@@ -214,7 +214,7 @@ create_import = {
 	}
 	#Soviet treaty end
 	
-	unlock_national_focus = GER_rhineland
+	unlock_national_focus = GER_remiliterize_the_rhineland
 	unlock_national_focus = GER_anschluss
 	unlock_national_focus = GER_demand_sudetenland
 	unlock_national_focus = GER_first_vienna_award

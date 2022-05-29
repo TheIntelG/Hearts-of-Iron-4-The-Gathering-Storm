@@ -1,0 +1,243 @@
+﻿###########################
+# The Gathering Storm News Events
+###########################
+
+add_namespace = tgs_news
+
+# Turkey Joins Axis
+news_event = {
+	id = tgs_news.1
+	title = tgs_news.1.t
+	desc = tgs_news.1.d
+	picture = GFX_news_event_009
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_news.1.a
+		trigger = { 
+			OR = {
+				TAG = TUR
+				TAG = GER
+				AND = {
+					TAG = ITA
+					ITA = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = HUN
+					HUN = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = ROM
+					ROM = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = SLO
+					SLO = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = CRO
+					CRO = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = BUL
+					BUL = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = FIN
+					FIN = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = JAP
+					JAP = { has_government = fascism }
+				}
+				AND = {
+					TAG = MEN
+					MEN = {
+						has_government = fascism
+						OR = {
+							is_puppet_of = JAP
+							is_in_faction_with = JAP
+						}
+					}
+				}
+				AND = {
+					TAG = MAN
+					MAN = {
+						has_government = fascism
+						OR = {
+							is_puppet_of = JAP
+							is_in_faction_with = JAP
+						}
+					}
+				}
+				AND = {
+					TAG = SIA
+					SIA = {
+						has_government = fascism
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tgs_news.1.b
+		trigger = { 
+			NOT = {
+				OR = {
+					TAG = TUR
+					TAG = GER
+					AND = {
+						TAG = ITA
+						ITA = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = HUN
+						HUN = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = ROM
+						ROM = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = SLO
+						SLO = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = CRO
+						CRO = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = BUL
+						BUL = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = FIN
+						FIN = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = JAP
+						JAP = { has_government = fascism }
+					}
+					AND = {
+						TAG = MEN
+						MEN = {
+							has_government = fascism
+							OR = {
+								is_puppet_of = JAP
+								is_in_faction_with = JAP
+							}
+						}
+					}
+					AND = {
+						TAG = MAN
+						MAN = {
+							has_government = fascism
+							OR = {
+								is_puppet_of = JAP
+								is_in_faction_with = JAP
+							}
+						}
+					}
+					AND = {
+						TAG = SIA
+						SIA = {
+							has_government = fascism
+							is_in_faction_with = JAP
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# China Joins Axis
+news_event = {
+	id = tgs_news.2
+	title = tgs_news.2.t
+	desc = tgs_news.2.d
+	picture = GFX_news_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_news.2.a
+		trigger = { 
+			OR = {
+				TAG = CHI
+				TAG = GER
+				AND = {
+					TAG = ITA
+					ITA = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = HUN
+					HUN = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = ROM
+					ROM = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = SLO
+					SLO = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = CRO
+					CRO = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = BUL
+					BUL = { is_in_faction_with = GER }
+				}
+				AND = {
+					TAG = FIN
+					FIN = { is_in_faction_with = GER }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tgs_news.2.b
+		trigger = { 
+			NOT = {
+				OR = {
+					TAG = CHI
+					TAG = GER
+					AND = {
+						TAG = ITA
+						ITA = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = HUN
+						HUN = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = ROM
+						ROM = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = SLO
+						SLO = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = CRO
+						CRO = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = BUL
+						BUL = { is_in_faction_with = GER }
+					}
+					AND = {
+						TAG = FIN
+						FIN = { is_in_faction_with = GER }
+					}
+				}
+			}
+		}
+	}
+}

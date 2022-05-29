@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_ger_aircraft_1"
+		texturefile = "gfx/event_pictures/GER/report_event_ger_aircraft_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_navy_1"
+		texturefile = "gfx/event_pictures/GER/report_event_ger_navy_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_chi_railway_construction"
+		texturefile = "gfx/event_pictures/CHI/report_event_ger_chi_railway_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_train_the_nra"
+		texturefile = "gfx/event_pictures/CHI/report_event_ger_train_the_nra.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_modernise_chi_arsenal"
+		texturefile = "gfx/event_pictures/CHI/report_event_ger_modernise_chi_arsenal.dds"
+	}
+}

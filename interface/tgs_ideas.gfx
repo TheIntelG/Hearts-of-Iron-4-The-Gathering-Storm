@@ -1,0 +1,18 @@
+spriteTypes = {	
+	# GERMANY #
+	# SpriteType = {
+	# 	name = "GFX_idea_hanomag"
+	# 	texturefile = "gfx/interface/ideas/idea_hanomag.dds"
+	# }
+
+	# SpriteType = {
+	# 	name = "GFX_idea_auto_union"
+	# 	texturefile = "gfx/interface/ideas/idea_auto_union.dds"
+	# }
+
+	# CHINA #
+	SpriteType = {
+		name = "GFX_idea_german_three_year_plan"
+		texturefile = "gfx/interface/ideas/CHI/idea_german_three_year_plan.dds"
+	}
+}

@@ -1,0 +1,12 @@
+﻿l_english:
+## GERMANY DECISIONS ##
+ GER_hapro_agreement:0 "HAPRO Agreement"
+ GER_hapro_agreement_desc:0 "With the signing of the HAPRO Agreement between [GER.GetNameDef] and [CHI.GetName], we are making a "gentlemen's agreement" that we will provide [CHI.GetName] with guns worth 100 million Reichsmarks. In return [CHI.GetName] will provide us with access to their raw tungesten resources."
+ GER_modernise_chinese_railway:0 "Modernise the Chinese Railway"
+ GER_modernise_chinese_railway_desc:0 "[CHI.GetName] has only about 16 000 km of railways, much less than the 160 000 km that the first leader of the Kuomintang, Sun Yat-sen, had envisioned. In addition, half of these are controlled by Japan in Manchuria. However, with additional Sino-German agreements we could provide the rapid development of their railways which in return will serve us as a more efficient way to export their raw materials."
+ GER_train_the_national_revolutionary_army:0 "Train the National Revolutionary Army"
+ GER_train_the_national_revolutionary_army_desc:0 "Alexander von Falkenhausen believes that it is too optimistic to expect the NRA to be supported by armor or artillery as it is lacking the industrial capacity. Von Falkenhausen believes it would be much better to create a mobile force that relies on small arms and is trained in infiltration tactics."
+ GER_modernise_chinese_arsenal:0 "Modernise Chinese Arsenal"
+ GER_modernise_chinese_arsenal_desc:0 "Our assistance in the military is not limited to personnel training and reorganisation, it also includes military hardware. Therefore, projects must be undertaken to modernise the existing Chinese arsenal, for example by reconstructing the Hanyang Arsenal to produce their own machine guns, mortars and main service rifles."
+ GER_three_year_plan:0 "Three-Year Plan"
+ GER_three_year_plan_desc:0 "The most important industrial project that we can offer the Chinese is the Three-Year Plan, which would be administered by their government's National Resource Commission and the Hapro corporation. The purpose of this plan is to help [CHI.GetName] resist [JAP.GetName] in the short run and create a centre for future Chinese industrial development in the long run. Eventually even gaining an industrial powerhouse ally in Asia."

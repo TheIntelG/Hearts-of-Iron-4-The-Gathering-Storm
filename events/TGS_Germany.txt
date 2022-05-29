@@ -110,7 +110,7 @@ country_event = {
 	id = tgs_germany.2
 	title = tgs_germany.2.t
 	desc = tgs_germany.2.d
-	picture = GFX_report_event_ast_navy
+	picture = GFX_report_event_ger_navy_1
 
 	is_triggered_only = yes
 
@@ -144,5 +144,1185 @@ country_event = {
 			base = 1
 		}
 		set_country_flag = GER_rebuild_the_high_seas_fleet_flag
+	}
+}
+# Germany Invites Turkey in Axis
+country_event = {
+	id = tgs_germany.3
+	title = tgs_germany.3.t
+	desc = tgs_germany.3.d
+	picture = GFX_report_event_german_turkish_pact
+
+	is_triggered_only = yes
+
+	option = { # YES
+		name = tgs_germany.3.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				TUR = {
+					has_government = fascism
+				}
+				factor = 5
+			}
+			modifier = {
+				TUR = {
+					has_opinion = {
+						target = GER
+						value > 25
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.4
+			add_to_faction = TUR
+		}
+		hidden_effect = {
+			news_event = tgs_news.1
+		}
+	}
+
+	option = { # NO
+		name = tgs_germany.3.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				TUR = {
+					has_opinion = {
+						target = GER
+						value < 25
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.5
+		}
+	}
+}
+# Turkey Agrees to Join Axis
+country_event = {
+	id = tgs_germany.4
+	title = tgs_germany.4.t
+	desc = tgs_germany.4.d
+	picture = GFX_report_event_tur_ataturk_writing_desk
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.4.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Turkey Refuses to Join Axis
+country_event = {
+	id = tgs_germany.5
+	title = tgs_germany.5.t
+	desc = tgs_germany.5.d
+	picture = GFX_report_event_tur_cakmak_general_staff
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.5.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Germany invests in China
+country_event = {
+	id = tgs_germany.6
+	title = tgs_germany.6.t
+	desc = tgs_germany.6.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	# China agrees to investment
+	option = {
+		name = tgs_germany.6.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 0
+					}
+				}
+				factor = 5
+			}
+		}
+		CHI = {
+			if = {
+				limit = {
+					owns_state = 605
+					controls_state = 605
+				}
+				605 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			} else = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = ger_chi_invested
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = neutrality
+					}
+				}
+				add_timed_idea = {
+					idea = neutrality_influence
+					days = 35
+				}
+			}
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = invested_in_china
+			}
+		}
+		GER = {
+			country_event = tgs_germany.7
+			custom_effect_tooltip = GER_invest_in_china_tt
+			set_country_flag = GER_allowed_china_investment_flag
+		}
+	}
+
+	# China refuses to investment
+	option = {
+		name = tgs_germany.6.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < -10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.8
+		}
+	}
+}
+# China agrees to investment
+country_event = {
+	id = tgs_germany.7
+	title = tgs_germany.7.t
+	desc = tgs_germany.7.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.7.a
+		custom_effect_tooltip = GER_invest_in_china_tt
+		unlock_decision_tooltip = GER_hapro_agreement
+		unlock_decision_tooltip = GER_modernise_chinese_railway
+		unlock_decision_tooltip = GER_train_the_national_revolutionary_army
+		unlock_decision_tooltip = GER_modernise_chinese_arsenal
+		unlock_decision_tooltip = GER_three_year_plan
+	}
+}
+# China refuses to investment
+country_event = {
+	id = tgs_germany.8
+	title = tgs_germany.8.t
+	desc = tgs_germany.8.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.8.a
+	}
+}
+# Germany proposes HAPRO Agreement to China
+country_event = {
+	id = tgs_germany.9
+	title = tgs_germany.9.t
+	desc = tgs_germany.9.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	# China signs HAPRO Agreement
+	option = {
+		name = tgs_germany.9.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 2000
+				target = CHI
+			}
+			send_equipment = {
+				equipment = motorized_equipment
+				amount = 250
+				target = CHI
+			}
+			country_event = tgs_germany.10
+		}
+		CHI = {
+			give_resource_rights = {
+				receiver = GER
+				state = 602
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = neutrality
+					}
+				}
+				add_timed_idea = {
+					idea = neutrality_influence
+					days = 35
+				}
+			}
+		}
+	}
+
+	# China refuses HAPRO Agreement
+	option = {
+		name = tgs_germany.9.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < -10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.11
+		}
+	}
+}
+# China signs HAPRO Agreement
+country_event = {
+	id = tgs_germany.10
+	title = tgs_germany.10.t
+	desc = tgs_germany.10.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.10.a
+	}
+}
+# China refuses to sign HAPRO Agreement
+country_event = {
+	id = tgs_germany.11
+	title = tgs_germany.11.t
+	desc = tgs_germany.11.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.11.a
+	}
+}
+# Germany offers railway construction project
+country_event = {
+	id = tgs_germany.12
+	title = tgs_germany.12.t
+	desc = tgs_germany.12.d
+	picture = GFX_report_event_ger_chi_railway_construction
+
+	is_triggered_only = yes
+	# China accepts the Railway Project
+	option = {
+		name = tgs_germany.12.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.13
+		}
+		CHI = {
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = neutrality
+					}
+				}
+				add_timed_idea = {
+					idea = neutrality_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						AND = {
+							owns_state = 600
+							controls_state = 600
+							owns_state = 749
+							controls_state = 749
+							owns_state = 596
+							controls_state = 596
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					path = { 3992 4038 4185 1153 12019 1125 10014 7191 }
+					start_province  = 3992
+					target_province = 7191
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						AND = {
+							owns_state = 600
+							controls_state = 600
+							owns_state = 620
+							controls_state = 620
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					path = { 1628 1036 4619 }
+					start_province  = 1628
+					target_province = 4619
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						AND = {
+							owns_state = 750
+							controls_state = 750
+							owns_state = 748
+							controls_state = 748
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					path = { 7101 7279 4896 10822 9939 1010 }
+					start_province  = 7101
+					target_province = 1010
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						AND = {
+							owns_state = 748
+							controls_state = 748
+							owns_state = 605
+							controls_state = 605
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					path = { 1010 4431 6999 }
+					start_province  = 1010
+					target_province = 6999
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						AND = {
+							owns_state = 748
+							controls_state = 748
+							owns_state = 603
+							controls_state = 603
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					path = { 1010 10763 4504 }
+					start_province  = 1010
+					target_province = 4504
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 605
+					controls_state = 605
+				}
+				605 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 6999
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	# China refuses Railway Project
+	option = {
+		name = tgs_germany.12.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < -10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.14
+		}
+	}
+}
+# China allows railway construction
+country_event = {
+	id = tgs_germany.13
+	title = tgs_germany.13.t
+	desc = tgs_germany.13.d
+	picture = GFX_report_event_ger_chi_railway_construction
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.13.a
+	}
+}
+# China refuses railway construction
+country_event = {
+	id = tgs_germany.14
+	title = tgs_germany.14.t
+	desc = tgs_germany.14.d
+	picture = GFX_report_event_ger_chi_railway_construction
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.14.a
+	}
+}
+# Germany offers to Train the NRA
+country_event = {
+	id = tgs_germany.15
+	title = tgs_germany.15.t
+	desc = tgs_germany.15.d
+	picture = GFX_report_event_ger_train_the_nra
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.15.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.16
+		}
+		CHI = {
+			army_experience = 35
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = neutrality
+					}
+				}
+				add_timed_idea = {
+					idea = neutrality_influence
+					days = 35
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tgs_germany.15.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < -10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.17
+		}
+	}
+}
+# China allows NRA Training
+country_event = {
+	id = tgs_germany.16
+	title = tgs_germany.16.t
+	desc = tgs_germany.16.d
+	picture = GFX_report_event_ger_train_the_nra
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.16.a
+	}
+}
+# China refuses NRA Training
+country_event = {
+	id = tgs_germany.17
+	title = tgs_germany.17.t
+	desc = tgs_germany.17.d
+	picture = GFX_report_event_ger_train_the_nra
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.17.a
+	}
+}
+# Air Innovations
+country_event = {
+	id = tgs_germany.18
+	title = tgs_germany.18.t
+	desc = tgs_germany.18.d
+	picture = GFX_report_event_ger_aircraft_1
+
+	is_triggered_only = yes
+
+	option = {
+		# Strategic Destruction
+		name = tgs_germany.18.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_tech = air_superiority
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					has_tech = formation_flying
+					has_tech = force_rotation
+				}
+				factor = 0
+			}
+		}
+
+		set_country_flag = generic_strategic_destruction_flag
+
+		add_doctrine_cost_reduction = {
+			name = air_sup_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = strategic_destruction_tree
+		}
+	}
+
+	option = {
+		# Battlefield Support
+		name = tgs_germany.18.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_tech = formation_flying
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					has_tech = air_superiority
+					has_tech = force_rotation
+				}
+				factor = 0
+			}
+		}
+
+		set_country_flag = generic_battlefield_support_flag
+
+		add_doctrine_cost_reduction = {
+			name = air_sup_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = battlefield_support_tree
+		}
+	}
+
+	option = {
+		# Operational Integrity
+		name = tgs_germany.18.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_tech = force_rotation
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					has_tech = air_superiority
+					has_tech = formation_flying
+				}
+				factor = 0
+			}
+		}
+
+		set_country_flag = generic_operational_integrity_flag
+
+		add_doctrine_cost_reduction = {
+			name = air_sup_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = operational_integrity_tree
+		}
+	}
+}
+# Germany offers to modernise Chinese arsenal
+country_event = {
+	id = tgs_germany.19
+	title = tgs_germany.19.t
+	desc = tgs_germany.19.d
+	picture = GFX_report_event_ger_modernise_chi_arsenal
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.19.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.20
+		}
+		CHI = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_tech_bonus = {
+				name = GER_arsenal_modernisation
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 35
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = neutrality
+					}
+				}
+				add_timed_idea = {
+					idea = neutrality_influence
+					days = 35
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tgs_germany.19.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < -10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.21
+		}
+	}
+}
+# China allows arsenal modernisation
+country_event = {
+	id = tgs_germany.20
+	title = tgs_germany.20.t
+	desc = tgs_germany.20.d
+	picture = GFX_report_event_ger_modernise_chi_arsenal
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.20.a
+	}
+}
+# China refuses arsenal modernisation
+country_event = {
+	id = tgs_germany.21
+	title = tgs_germany.21.t
+	desc = tgs_germany.21.d
+	picture = GFX_report_event_ger_modernise_chi_arsenal
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.21.a
+	}
+}
+# Germany offers 3 year plan
+country_event = {
+	id = tgs_germany.22
+	title = tgs_germany.22.t
+	desc = tgs_germany.22.d
+	picture = GFX_report_event_ger_modernise_chi_arsenal
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.22.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.23
+		}
+		CHI = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_tech_bonus = {
+				name = GER_arsenal_modernisation
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 225
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 225
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 225
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = neutrality
+					}
+				}
+				add_timed_idea = {
+					idea = neutrality_influence
+					days = 365
+				}
+			}
+			add_timed_idea = {
+				idea = CHI_german_three_year_plan
+				days = 1095
+			}
+		}
+	}
+
+	option = {
+		name = tgs_germany.22.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < -10
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.24
+		}
+	}
+}
+# China agrees to the Three-Year Plan
+country_event = {
+	id = tgs_germany.23
+	title = tgs_germany.23.t
+	desc = tgs_germany.23.d
+	picture = GFX_report_event_ger_modernise_chi_arsenal
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.23.a
+	}
+}
+# China refuses the Three-Year Plan
+country_event = {
+	id = tgs_germany.24
+	title = tgs_germany.24.t
+	desc = tgs_germany.24.d
+	picture = GFX_report_event_ger_modernise_chi_arsenal
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.24.a
+	}
+}
+# Germany Invites China in Axis
+country_event = {
+	id = tgs_germany.25
+	title = tgs_germany.3.t
+	desc = tgs_germany.25.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = { # YES
+		name = tgs_germany.25.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					fascism > 0.3
+				}
+				factor = 5
+			}
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value > 25
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.26
+			add_to_faction = CHI
+		}
+		hidden_effect = {
+			news_event = tgs_news.2
+		}
+	}
+
+	option = { # NO
+		name = tgs_germany.25.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				CHI = {
+					has_opinion = {
+						target = GER
+						value < 25
+					}
+				}
+				factor = 5
+			}
+		}
+		GER = {
+			country_event = tgs_germany.27
+		}
+	}
+}
+# China Agrees to Join Axis
+country_event = {
+	id = tgs_germany.26
+	title = tgs_germany.26.t
+	desc = tgs_germany.26.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.26.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# China Refuses to Join Axis
+country_event = {
+	id = tgs_germany.27
+	title = tgs_germany.27.t
+	desc = tgs_germany.27.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.27.a
+		ai_chance = {
+			base = 1
+		}
 	}
 }

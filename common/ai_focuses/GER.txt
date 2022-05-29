@@ -32,7 +32,7 @@ ai_historical_focus_list_GER = {
 		GER_italy_ally
 		GER_japan_friend
 		GER_naval_air_effort
-		GER_ussr_war_goal
+		GER_operation_barbarossa
 		GER_autobahn
 		GER_air_innovation
 		GER_tactical_air_effort
