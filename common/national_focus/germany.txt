@@ -3424,7 +3424,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_anti_comitern_pact
-		cost = 9
+		cost = 10
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -3593,8 +3593,8 @@ focus_tree = {
 		}
 		x = -4
 		y = 1
+		cost = 5
 		relative_position_id = GER_remiliterize_the_rhineland
-		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -3645,6 +3645,79 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_japanese_industrial_cooperation
+		icon = GFX_focus_ger_jap_industrial_cooperation
+		prerequisite = { focus = GER_japan_friend }
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+				JAP = {
+					custom_trigger_tooltip = {
+						tooltip = GER_alone_or_peace_faction_tt
+						is_alone_or_in_faction_at_peace_with_GER = yes
+					}
+				}
+			}
+		}
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = GER_japan_friend
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			JAP = {
+				country_event = tgs_germany.28
+			}
+		}
+	}
+
+	focus = {
+		id = GER_ally_co_prosperity_sphere
+		icon = GFX_focus_ger_japan_ally
+		prerequisite = { focus = GER_japanese_industrial_cooperation }
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+				JAP = {
+					OR = {
+						is_faction_leader = yes
+						is_in_faction = no
+					}
+				}
+			}
+		}
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = GER_japanese_industrial_cooperation
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			JAP = {
+				country_event = tgs_germany.36
+			}
+		}
+	}
+
 	focus = {
 		id = GER_china_friend
 		icon = GFX_focus_ger_befriend_china
@@ -4188,7 +4261,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_remiliterize_the_rhineland
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {

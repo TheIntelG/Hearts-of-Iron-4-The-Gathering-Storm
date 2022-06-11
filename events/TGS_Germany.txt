@@ -1326,3 +1326,308 @@ country_event = {
 		}
 	}
 }
+# German-Japanese Industrial Co-operation
+country_event = {
+	id = tgs_germany.28
+	title = tgs_germany.28.t
+	desc = tgs_germany.28.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.28.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				JAP = {
+					has_government = fascism
+				}
+				factor = 10
+			}
+		}
+		GER = {
+			country_event = tgs_germany.29
+		}
+		JAP = {
+			IF = {
+				limit = {
+					JAP = { 
+						NOT = {
+							has_government = root
+						}
+					}
+				}
+				IF = {
+					limit = {
+						GER = {
+							has_government = fascism
+						}
+					}
+					add_timed_idea = {
+						idea = fascist_influence
+						days = 70
+					}
+				}
+				IF = {
+					limit = {
+						GER = {
+							has_government = communism
+						}
+					}
+					add_timed_idea = {
+						idea = communist_influence
+						days = 70
+					}
+				}
+				IF = {
+					limit = {
+						GER = {
+							has_government = democratic
+						}
+					}
+					add_timed_idea = {
+						idea = democratic_influence
+						days = 70
+					}
+				}
+				IF = {
+					limit = {
+						GER = {
+							has_government = neutrality
+						}
+					}
+					add_timed_idea = {
+						idea = neutrality_influence
+						days = 70
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tgs_germany.28.b
+		ai_chance = {
+			base = 1
+		}
+		GER = {
+			country_event = tgs_germany.30
+		}
+	}
+}
+# Japan agrees to co-operate
+country_event = {
+	id = tgs_germany.29
+	title = tgs_germany.29.t
+	desc = tgs_germany.29.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.29.a
+		ai_chance = {
+			base = 1
+		}
+		GER = {
+			set_country_flag = GER_japan_agreed_to_cooperation
+			custom_effect_tooltip = GER_cooperate_with_japan_tt 
+			unlock_decision_tooltip = GER_lurgi_group_plants
+			unlock_decision_tooltip = GER_aircraft_exchange
+			unlock_decision_tooltip = GER_provide_rockets
+			unlock_decision_tooltip = GER_japanese_tank_development
+			unlock_decision_tooltip = GER_naval_exchange
+		}
+	}
+}
+# Japan refuses to co-operate
+country_event = {
+	id = tgs_germany.30
+	title = tgs_germany.30.t
+	desc = tgs_germany.30.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.30.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Co-operation increases our oil production
+country_event = {
+	id = tgs_germany.31
+	title = tgs_germany.31.t
+	desc = tgs_germany.31.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.31.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Germany & Japan exchange aircraft
+country_event = {
+	id = tgs_germany.32
+	title = tgs_germany.32.t
+	desc = tgs_germany.32.d
+	picture = GFX_report_event_ger_aircraft_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.32.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Germany sends V-2 Rockets to Japan
+country_event = {
+	id = tgs_germany.33
+	title = tgs_germany.33.t
+	desc = tgs_germany.33.d
+	picture = GFX_report_event_ger_rocketry_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.33.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Germany helps Japan with tanks
+country_event = {
+	id = tgs_germany.34
+	title = tgs_germany.34.t
+	desc = tgs_germany.34.d
+	picture = GFX_report_event_ger_tank_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.34.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Germany & Japan exchange naval tech
+country_event = {
+	id = tgs_germany.35
+	title = tgs_germany.35.t
+	desc = tgs_germany.35.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.35.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Merge Co-prosperity Sphere into Axis
+country_event = {
+	id = tgs_germany.36
+	title = tgs_germany.36.t
+	desc = tgs_germany.36.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_germany.36.a
+		if = {
+			limit = {
+				OR = {
+					is_in_faction = no
+					AND = {
+						is_alone_or_in_faction_at_peace_with_GER = yes
+						is_faction_leader = no
+					}
+				}
+			}
+			GER = {
+				add_to_faction = JAP
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = JAP
+				}
+				set_country_flag = axis_member
+			}
+			every_country = {
+				limit = {
+					has_country_flag = axis_member
+				}
+				GER = {
+					add_to_faction = PREV
+				}
+			}
+		}
+		hidden_effect = {
+			news_event = tgs_news.3
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_opinion = {
+					target = GER
+					value > 20
+				}
+				factor = 2
+			}
+			modifier = {
+				GER = {
+					has_same_ideology = yes
+				}
+				factor = 2
+			}
+		}
+	}
+
+	option = {
+		name = tgs_germany.36.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_opinion = {
+					target = GER
+					value < 10
+				}
+				factor = 3
+			}
+			modifier = {
+				NOT = {
+					GER = {
+						has_same_ideology = yes
+					}
+				}
+				factor = 2
+			}
+			modifier = {
+				JAP = {
+					has_completed_focus = JAP_purge_the_kodoha_faction
+				}
+				factor = 2
+			}
+		}
+	}
+}

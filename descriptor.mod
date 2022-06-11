@@ -4,4 +4,4 @@ tags={
 	"Historical"
 }
 name="Hearts of Iron 4 The Gathering Storm"
-supported_version="1.11.11"
+supported_version="1.11.*"

@@ -1,4 +1,7 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.9:
+ - Renamed some German army focuses
+ - Expanded Befriend Japan path
 ## BETA 0.0.8:
  - Redid some German Hitler path focus GFX
  - Added German Focus to invite Turkey to Axis

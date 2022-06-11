@@ -2,3 +2,4 @@
 # TOOL TIPS #
 ## GERMANY ##
  GER_invest_in_china_tt:0 "Allows [GER.GetNameDef] to invest in [CHI.GetName]"
+ GER_cooperate_with_japan_tt:0 "Allows [GER.GetNameDef] to cooperate with [JAP.GetName]\n"

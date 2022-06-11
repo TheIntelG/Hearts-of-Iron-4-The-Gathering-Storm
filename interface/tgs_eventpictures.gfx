@@ -19,4 +19,12 @@ spriteTypes = {
 		name = "GFX_report_event_ger_modernise_chi_arsenal"
 		texturefile = "gfx/event_pictures/CHI/report_event_ger_modernise_chi_arsenal.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_ger_rocketry_1"
+		texturefile = "gfx/event_pictures/GER/report_event_ger_rocketry_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_tank_1"
+		texturefile = "gfx/event_pictures/GER/report_event_ger_tank_1.dds"
+	}
 }

@@ -344,7 +344,7 @@ GER_invest_in_china = {
 			}
 		}
 
-		cost = 75
+		cost = 35
 		days_remove = 35
 
 		fire_only_once = yes
@@ -394,7 +394,7 @@ GER_invest_in_china = {
 			}
 		}
 
-		cost = 75
+		cost = 35
 		days_remove = 35
 
 		fire_only_once = yes
@@ -444,7 +444,7 @@ GER_invest_in_china = {
 			}
 		}
 
-		cost = 75
+		cost = 35
 		days_remove = 35
 
 		fire_only_once = yes
@@ -494,7 +494,7 @@ GER_invest_in_china = {
 			}
 		}
 
-		cost = 75
+		cost = 35
 		days_remove = 35
 
 		fire_only_once = yes
@@ -547,7 +547,7 @@ GER_invest_in_china = {
 			}
 		}
 
-		cost = 75
+		cost = 35
 		days_remove = 35
 
 		fire_only_once = yes
@@ -564,6 +564,293 @@ GER_invest_in_china = {
 			}
 			GER = {
 				clr_country_flag = GER_investing
+			}
+		}
+	}
+}
+
+GER_japanese_industrial_cooperation = {
+	GER_lurgi_group_plants = {
+		icon = GFX_decision_oil
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			NOT = {
+				has_country_flag = GER_investing
+			}
+		}
+
+		cost = 35
+		days_remove = 35
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect  = {
+				set_country_flag = GER_investing
+			}
+		}
+
+		remove_effect = {
+			GER = {
+				clr_country_flag = GER_investing
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.5
+					uses = 1
+					category = synth_resources
+				}
+			}
+			JAP = {
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 1.0
+					uses = 1
+					category = synth_resources
+				}
+				country_event = tgs_germany.31
+			}
+		}
+	}
+	GER_aircraft_exchange = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			NOT = {
+				has_country_flag = GER_investing
+			}
+		}
+
+		cost = 35
+		days_remove = 35
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect  = {
+				set_country_flag = GER_investing
+			}
+		}
+
+		remove_effect = {
+			GER = {
+				clr_country_flag = GER_investing
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = air_equipment
+				}
+			}
+			JAP = {
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = air_equipment
+				}
+				country_event = tgs_germany.32
+			}
+		}
+	}
+	GER_provide_rockets = {
+		icon = GFX_decision_generic_wreckers
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+				GER = {
+					has_tech = experimental_rockets
+				}
+			}
+			NOT = {
+				has_country_flag = GER_investing
+			}
+		}
+
+		cost = 35
+		days_remove = 35
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect  = {
+				set_country_flag = GER_investing
+			}
+		}
+
+		remove_effect = {
+			GER = {
+				clr_country_flag = GER_investing
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = rocketry
+				}
+			}
+			JAP = {
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = rocketry
+				}
+				country_event = tgs_germany.33
+			}
+		}
+	}
+	GER_japanese_tank_development = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			NOT = {
+				has_country_flag = GER_investing
+			}
+		}
+
+		cost = 35
+		days_remove = 35
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect  = {
+				set_country_flag = GER_investing
+			}
+		}
+
+		remove_effect = {
+			GER = {
+				clr_country_flag = GER_investing
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = cat_anti_tank
+				}
+			}
+			JAP = {
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = armor
+				}
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = cat_anti_tank
+				}
+				country_event = tgs_germany.34
+			}
+		}
+	}
+	GER_naval_exchange = {
+		icon = GFX_decision_generic_merge_plant_ship
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = JAP
+				JAP = {
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			NOT = {
+				has_country_flag = GER_investing
+			}
+		}
+
+		cost = 35
+		days_remove = 35
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect  = {
+				set_country_flag = GER_investing
+			}
+		}
+
+		remove_effect = {
+			GER = {
+				clr_country_flag = GER_investing
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = naval_equipment
+				}
+			}
+			JAP = {
+				add_tech_bonus = {
+					name = GER_lurgi_group_plants
+					bonus = 0.25
+					uses = 1
+					category = naval_equipment
+				}
+				country_event = tgs_germany.35
 			}
 		}
 	}

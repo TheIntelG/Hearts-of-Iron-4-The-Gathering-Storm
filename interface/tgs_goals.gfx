@@ -260,4 +260,14 @@ spriteTypes = {
 		name = "GFX_focus_ger_china_ally"
 		texturefile = "gfx/interface/goals/GER/focus_ger_china_ally.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_jap_industrial_cooperation"
+		texturefile = "gfx/interface/goals/GER/focus_ger_jap_industrial_cooperation.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_japan_ally"
+		texturefile = "gfx/interface/goals/GER/focus_ger_japan_ally.dds"
+	}
 }
