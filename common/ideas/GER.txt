@@ -1,5 +1,4 @@
 ideas = {
-
 	country = {
 		sour_loser = {
 			
@@ -1608,6 +1607,36 @@ ideas = {
 					instant = yes
 					build_cost_ic = 0.05
 				}
+			}
+		}
+
+		GER_integrated_austrian_economy = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = integrated_austrian_economy
+
+			cancel = {
+				OR = {
+					AUS = {
+						exists = no
+					}
+					AUS = {
+						NOT = { has_autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 	}

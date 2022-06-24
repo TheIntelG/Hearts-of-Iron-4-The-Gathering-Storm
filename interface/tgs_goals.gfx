@@ -270,4 +270,69 @@ spriteTypes = {
 		name = "GFX_focus_ger_japan_ally"
 		texturefile = "gfx/interface/goals/GER/focus_ger_japan_ally.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_anschluss"
+		texturefile = "gfx/interface/goals/GER/focus_ger_anschluss.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_reichskommessariat_osterreich"
+		texturefile = "gfx/interface/goals/GER/focus_ger_reichskommessariat_osterreich.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_czechoslovakia"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_czechoslovakia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_ally_czech"
+		texturefile = "gfx/interface/goals/GER/focus_ger_ally_czech.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_demand_sudetenland"
+		texturefile = "gfx/interface/goals/GER/focus_ger_demand_sudetenland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_first_vienna_award"
+		texturefile = "gfx/interface/goals/GER/focus_ger_first_vienna_award.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_fate_of_czechoslovakia"
+		texturefile = "gfx/interface/goals/GER/focus_ger_fate_of_czechoslovakia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_second_vienna_award"
+		texturefile = "gfx/interface/goals/GER/focus_ger_second_vienna_award.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_ally_italy"
+		texturefile = "gfx/interface/goals/GER/focus_ger_ally_italy.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_operation_alaric"
+		texturefile = "gfx/interface/goals/GER/focus_ger_operation_alaric.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_befriend_nationalist_spain"
+		texturefile = "gfx/interface/goals/GER/focus_ger_befriend_nationalist_spain.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_ally_nationalist_spain"
+		texturefile = "gfx/interface/goals/GER/focus_ger_ally_nationalist_spain.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ger_operation_felix"
+		texturefile = "gfx/interface/goals/GER/focus_ger_operation_felix.dds"
+	}
 }

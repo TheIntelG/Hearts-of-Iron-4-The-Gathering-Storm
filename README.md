@@ -1,4 +1,13 @@
 # Hearts of Iron 4 The Gathering Storm
+## BETA 0.0.10:
+ - Renamed some focuses
+ - Added alternate to Alliance with Spain: Operation Felix
+ - Expanded Spain path
+ - Added alternate to Alliance with Italy: Operation Alaric
+ - Expanded Fate of Czechoslovakia event
+ - Moved focus Form reichskommissariats from industrial branch to Hitler branch
+ - Added alternate to Anschluss: Reichskommessariat Österreich
+ - Reworked some Hitler path GFX
 ## BETA 0.0.9:
  - Renamed some German army focuses
  - Expanded Befriend Japan path

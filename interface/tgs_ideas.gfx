@@ -1,14 +1,18 @@
 spriteTypes = {	
 	# GERMANY #
-	# SpriteType = {
-	# 	name = "GFX_idea_hanomag"
-	# 	texturefile = "gfx/interface/ideas/idea_hanomag.dds"
-	# }
+	SpriteType = {
+		name = "GFX_idea_hanomag"
+		texturefile = "gfx/interface/ideas/idea_hanomag.dds"
+	}
 
-	# SpriteType = {
-	# 	name = "GFX_idea_auto_union"
-	# 	texturefile = "gfx/interface/ideas/idea_auto_union.dds"
-	# }
+	SpriteType = {
+		name = "GFX_idea_auto_union"
+		texturefile = "gfx/interface/ideas/idea_auto_union.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_integrated_austrian_economy"
+		texturefile = "gfx/interface/ideas/GER/idea_integrated_austrian_economy.dds"
+	}
 
 	# CHINA #
 	SpriteType = {

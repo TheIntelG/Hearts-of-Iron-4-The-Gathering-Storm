@@ -2170,32 +2170,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_form_the_reichskommissariats
-		icon = GFX_focus_ger_reichskommisariats
-		prerequisite = {
-			focus = GER_german_war_economy
-			focus = GER_integrate_war_economies
-		}
-		available = {
-			has_government = fascism
-		}
-		x = 1
-		y = 1
-		relative_position_id = GER_integrate_war_economies
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			custom_effect_tooltip = GER_reichskommissariats_tt
-			unlock_decision_tooltip = GER_reichskommissariat_norwegen
-			unlock_decision_tooltip = GER_reichskommissariat_niederlande
-			unlock_decision_tooltip = GER_reichskommissariat_belgien_nordfrankreich
-			unlock_decision_tooltip = GER_reichskommissariat_ostland
-			unlock_decision_tooltip = GER_reichskommissariat_ukraine
-		}
-	}
-	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_focus_generic_naval_innovation_1
 		x = 11
@@ -3306,7 +3280,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_remiliterize_the_rhineland
 		}
-		x = -3
+		x = -5
 		y = 4
 		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 10
@@ -3591,7 +3565,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = -4
+		x = -6
 		y = 1
 		cost = 5
 		relative_position_id = GER_remiliterize_the_rhineland
@@ -3745,7 +3719,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = -6
+		x = -8
 		y = 1
 		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 5
@@ -4041,6 +4015,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GER_italy_ally
+			focus = GER_operation_alaric
 		}
 		mutually_exclusive = {
 			focus = GER_turkey_friend
@@ -4090,6 +4065,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GER_italy_ally
+			focus = GER_operation_alaric
 		}
 		mutually_exclusive = {
 			focus = GER_operation_gertrud
@@ -4240,6 +4216,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_remiliterize_the_rhineland
 		}
+		mutually_exclusive = {
+			focus = GER_reichskommissariat_osterreich
+		}
 		available_if_capitulated = no
 		available = {
 			is_subject = no
@@ -4258,7 +4237,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_remiliterize_the_rhineland
 		cost = 5
@@ -4403,16 +4382,190 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_reichskommissariat_osterreich
+		icon = GFX_focus_ger_reichskommessariat_osterreich
+		prerequisite = {
+			focus = GER_remiliterize_the_rhineland
+		}
+		mutually_exclusive = {
+			focus = GER_anschluss
+		}
+		available_if_capitulated = no
+		available = {
+			is_subject = no
+			has_army_manpower = {
+				size > 349999
+			}
+			NOT = {
+				has_idea = rhineland_challenge_met
+			}
+			AUS = {
+				exists = yes
+			}
+		}
+		cancel = {
+			OR = {
+				is_subject = yes
+				has_idea = rhineland_challenge_met
+				has_war_with = AUS
+			}
+		}
+		cost = 5
+		x = 4
+		y = 1
+		relative_position_id = GER_remiliterize_the_rhineland
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			army_experience = 20
+			if = {
+				limit = {
+					country_exists = AUS
+					AUS = {
+						has_civil_war = no
+						OR = {
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+						}
+					}
+				}
+				AUS = {
+					country_event = tgs_germany.37
+				}
+				custom_effect_tooltip = anschluss_mefo_bills_tt
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						original_tag = AUS
+						has_civil_war = yes
+						OR = {
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+						}
+					}
+				}
+				custom_effect_tooltip = germany.126.warning
+				random_other_country = {
+					limit = {
+						original_tag = AUS
+						OR = {
+							has_government = fascism
+							AND = {
+								has_government = neutrality
+								NOT = {
+									any_other_country = {
+										original_tag = AUS
+										has_government = fascism
+									}
+								}
+							}
+							NOT = {
+								any_other_country = {
+									original_tag = AUS
+									OR = {
+										has_government = fascism
+										has_government = neutrality
+									}
+								}
+							}
+						}
+					}
+					country_event = {
+						id = germany.126
+						days = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					4 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 4
+			}
+			if = {
+				limit = {
+					152 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 152
+			}
+			if = {
+				limit = {
+					153 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 153
+			}
+		}
+	}
+	focus = {
+		id = GER_form_the_reichskommissariats
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = {
+			focus = GER_anschluss
+			focus = GER_reichskommissariat_osterreich
+		}
+		available = {
+			has_government = fascism
+		}
+		x = 5
+		y = 2
+		relative_position_id = GER_anschluss
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = GER_reichskommissariats_tt
+			unlock_decision_tooltip = GER_reichskommissariat_norwegen
+			unlock_decision_tooltip = GER_reichskommissariat_niederlande
+			unlock_decision_tooltip = GER_reichskommissariat_belgien_nordfrankreich
+			unlock_decision_tooltip = GER_reichskommissariat_ostland
+			unlock_decision_tooltip = GER_reichskommissariat_ukraine
+		}
+	}
 	focus = {
 		id = GER_demand_memel
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
 			focus = GER_anschluss
+			focus = GER_reichskommissariat_osterreich
 		}
 		available = {
 			is_subject = no
 		}
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -4756,7 +4909,7 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = {
 			focus = GER_danzig_or_war
-			focus = GER_poland_friend
+			focus = GER_danzig_vs_slovakia
 		}
 		available = {
 			OR = {
@@ -4944,9 +5097,10 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_czech_friend
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_ger_befriend_czechoslovakia
 		prerequisite = {
 			focus = GER_anschluss
+			focus = GER_reichskommissariat_osterreich
 		}
 		mutually_exclusive = {
 			focus = GER_demand_sudetenland
@@ -4978,6 +5132,9 @@ focus_tree = {
 				}
 				has_war_with = CZE
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
 		}
 		cancel_if_invalid = no
 		x = -4
@@ -5075,10 +5232,43 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = GER_czech_ally
+		icon = GFX_focus_ger_ally_czech
+		prerequisite = {
+			focus = GER_czech_friend
+		}
+		available = {
+			NOT = {
+				has_war_with = CZE
+			}
+			CZE = {
+				has_government = fascism
+			}
+		}
+		bypass = {
+			CZE = {
+				is_in_faction_with = GER
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = GER_czech_friend
+		completion_reward = {
+			CZE = {
+				country_event = tgs_germany.40
+			}
+		}
+	}
+	focus = {
 		id = GER_demand_sudetenland
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_ger_demand_sudetenland
 		prerequisite = {
 			focus = GER_anschluss
+			focus = GER_reichskommissariat_osterreich
 		}
 		mutually_exclusive = {
 			focus = GER_czech_friend
@@ -5118,7 +5308,7 @@ focus_tree = {
 			is_puppet = yes
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -5380,7 +5570,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_first_vienna_award
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_ger_first_vienna_award
 		prerequisite = {
 			focus = GER_demand_sudetenland
 		}
@@ -5410,6 +5600,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 			owns_state = 69
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
 		}
 		x = 0
 		y = 1
@@ -5441,7 +5634,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_end_of_czechoslovakia
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_ger_fate_of_czechoslovakia
 		prerequisite = {
 			focus = GER_first_vienna_award
 		}
@@ -5503,7 +5696,7 @@ focus_tree = {
 				}
 				set_global_flag = end_of_czechoslovakia
 				CZE = {
-					country_event = germany.53
+					country_event = tgs_germany.43
 				}
 			}
 			if = {
@@ -5574,7 +5767,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_second_vienna_award
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_ger_second_vienna_award
 		prerequisite = {
 			focus = GER_czech_friend
 			focus = GER_end_of_czechoslovakia
@@ -5680,9 +5873,12 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_italy_ally
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_ger_ally_italy
 		prerequisite = {
 			focus = GER_second_vienna_award
+		}
+		mutually_exclusive = {
+			focus = GER_operation_alaric
 		}
 		available = {
 			NOT = {
@@ -5701,7 +5897,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_second_vienna_award
 		cost = 10
@@ -5715,14 +5911,53 @@ focus_tree = {
 					target = GER
 					modifier = ger_ita_alliance_focus
 				}
+				country_event = tgs_germany.47
 			}
 		}
 	}
 	focus = {
-		id = GER_nationalist_spain_ally
-		icon = GFX_goal_generic_major_alliance
+		id = GER_operation_alaric
+		icon = GFX_focus_ger_operation_alaric
+		prerequisite = {
+			focus = GER_second_vienna_award
+		}
+		mutually_exclusive = {
+			focus = GER_italy_ally
+		}
+		available = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+		bypass = {
+			OR = {
+				ITA = { is_puppet_of = GER }
+				has_war_with = ITA
+				NOT = {
+					country_exists = ITA
+				}
+			}
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = GER_second_vienna_award
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ITA
+			}
+		}
+	}
+	focus = {
+		id = GER_nationalist_spain_friend
+		icon = GFX_focus_ger_befriend_nationalist_spain
 		prerequisite = {
 			focus = GER_italy_ally
+			focus = GER_operation_alaric
+		}
+		mutually_exclusive = {
+			focus = GER_operation_felix
 		}
 		available = {
 			if = {
@@ -5756,9 +5991,6 @@ focus_tree = {
 						has_war_with = GER
 					}
 					NOT = {
-						is_in_faction_with = GER
-					}
-					NOT = {
 						has_completed_focus = SPA_join_the_allies
 					}
 				}
@@ -5771,10 +6003,10 @@ focus_tree = {
 				}
 			}
 		}
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = GER_italy_ally
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -5831,10 +6063,6 @@ focus_tree = {
 						has_government = fascism
 					}
 					remove_ideas = SPA_recovering_from_civil_war
-					add_opinion_modifier = {
-						target = GER
-						modifier = ger_spa_alliance_focus
-					}
 				}
 			}
 			if = {
@@ -5843,10 +6071,93 @@ focus_tree = {
 				}
 				SPA = {
 					remove_ideas = SPA_recovering_from_civil_war
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_spain_ally
+		icon = GFX_focus_ger_ally_nationalist_spain
+		prerequisite = {
+			focus = GER_nationalist_spain_friend
+		}
+		bypass = {
+			SPA = {
+				is_in_faction_with = GER
+			}
+		}
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = GER_nationalist_spain_friend
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				random_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
 					add_opinion_modifier = {
 						target = GER
 						modifier = ger_spa_alliance_focus
 					}
+					country_event = tgs_germany.50
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					add_opinion_modifier = {
+						target = GER
+						modifier = ger_spa_alliance_focus
+					}
+					country_event = tgs_germany.50
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_operation_felix
+		icon = GFX_focus_ger_operation_felix
+		prerequisite = {
+			focus = GER_italy_ally
+			focus = GER_operation_alaric
+		}
+		mutually_exclusive = {
+			focus = GER_nationalist_spain_friend
+		}
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = GER_italy_ally
+		completion_reward = {
+			if = {
+				limit = {
+					SPA = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SPA
+				}
+			}
+			if = {
+				limit = {
+					SPR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SPR
 				}
 			}
 		}
@@ -6979,6 +7290,7 @@ focus_tree = {
 		id = GER_improve_national_spirit
 		prerequisite = {
 			focus = GER_anschluss
+			focus = GER_reichskommissariat_osterreich
 		}
 		icon = GFX_goal_support_fascism
 		available = {
@@ -7030,7 +7342,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 4
+		x = 6
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -7049,6 +7361,7 @@ focus_tree = {
 		id = GER_demand_slovenia
 		prerequisite = {
 			focus = GER_anschluss
+			focus = GER_reichskommissariat_osterreich
 		}
 		icon = GFX_goal_generic_political_pressure
 		available = {
@@ -7087,7 +7400,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10

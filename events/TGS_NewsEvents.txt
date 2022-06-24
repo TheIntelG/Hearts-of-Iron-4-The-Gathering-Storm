@@ -19,141 +19,22 @@ news_event = {
 			OR = {
 				TAG = TUR
 				TAG = GER
-				AND = {
-					TAG = ITA
-					ITA = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = HUN
-					HUN = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = ROM
-					ROM = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = SLO
-					SLO = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = CRO
-					CRO = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = BUL
-					BUL = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = FIN
-					FIN = { is_in_faction_with = GER }
-				}
-				AND = {
-					TAG = JAP
-					JAP = { has_government = fascism }
-				}
-				AND = {
-					TAG = MEN
-					MEN = {
-						has_government = fascism
-						OR = {
-							is_puppet_of = JAP
-							is_in_faction_with = JAP
-						}
-					}
-				}
-				AND = {
-					TAG = MAN
-					MAN = {
-						has_government = fascism
-						OR = {
-							is_puppet_of = JAP
-							is_in_faction_with = JAP
-						}
-					}
-				}
-				AND = {
-					TAG = SIA
-					SIA = {
-						has_government = fascism
-						is_in_faction_with = JAP
-					}
-				}
+				all_country = { is_in_faction_with = GER }
 			}
 		}
 	}
-
 	option = {
 		name = tgs_news.1.b
 		trigger = { 
-			NOT = {
-				OR = {
-					TAG = TUR
-					TAG = GER
-					AND = {
-						TAG = ITA
-						ITA = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = HUN
-						HUN = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = ROM
-						ROM = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = SLO
-						SLO = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = CRO
-						CRO = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = BUL
-						BUL = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = FIN
-						FIN = { is_in_faction_with = GER }
-					}
-					AND = {
-						TAG = JAP
-						JAP = { has_government = fascism }
-					}
-					AND = {
-						TAG = MEN
-						MEN = {
-							has_government = fascism
-							OR = {
-								is_puppet_of = JAP
-								is_in_faction_with = JAP
-							}
-						}
-					}
-					AND = {
-						TAG = MAN
-						MAN = {
-							has_government = fascism
-							OR = {
-								is_puppet_of = JAP
-								is_in_faction_with = JAP
-							}
-						}
-					}
-					AND = {
-						TAG = SIA
-						SIA = {
-							has_government = fascism
-							is_in_faction_with = JAP
-						}
-					}
-				}
+			OR = {
+				NOT = { TAG = TUR }
+				NOT = { TAG = GER }
+				NOT = { all_country = { is_in_faction_with = GER } }
+				NOT = { all_country = { has_government = fascism } }
 			}
 		}
 	}
 }
-
 # China Joins Axis
 news_event = {
 	id = tgs_news.2
@@ -167,7 +48,6 @@ news_event = {
 		name = tgs_news.2.a
 	}
 }
-
 # Japan Joins Axis
 news_event = {
 	id = tgs_news.3
@@ -178,6 +58,108 @@ news_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = tgs_news.3.a
+		name = tgs_news.2.a
+	}
+}
+# Establishment of Reichskommissariat Österreich
+news_event = {
+	id = tgs_news.4
+	title = tgs_news.4.t
+	desc = tgs_news.4.d
+	picture = GFX_news_event_german_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tgs_news.4.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = tgs_news.4.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = tgs_news.4.c
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = tgs_news.4.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+}
+# Czechoslovakia Joins Axis
+news_event = {
+	id = tgs_news.5
+	title = tgs_news.5.t
+	desc = tgs_news.5.d
+	picture = GFX_news_event_009
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_news.1.a
+		trigger = { 
+			OR = {
+				TAG = CZE
+				TAG = GER
+				all_country = { is_in_faction_with = GER }
+			}
+		}
+	}
+	option = {
+		name = tgs_news.1.b
+		trigger = { 
+			OR = {
+				NOT = { TAG = CZE }
+				NOT = { TAG = GER }
+				NOT = { all_country = { is_in_faction_with = GER } }
+				NOT = { all_country = { has_government = fascism } }
+			}
+		}
+	}
+}
+# Italy Joins Axis
+news_event = {
+	id = tgs_news.6
+	title = tgs_news.6.t
+	desc = tgs_news.6.d
+	picture = GFX_news_event_009
+
+	is_triggered_only = yes
+
+	option = {
+		name = tgs_news.1.a
+		trigger = { 
+			OR = {
+				TAG = ITA
+				TAG = GER
+				all_country = { is_in_faction_with = GER }
+			}
+		}
+	}
+	option = {
+		name = tgs_news.1.b
+		trigger = { 
+			OR = {
+				NOT = { TAG = ITA }
+				NOT = { TAG = GER }
+				NOT = { all_country = { is_in_faction_with = GER } }
+				NOT = { all_country = { has_government = fascism } }
+			}
+		}
 	}
 }

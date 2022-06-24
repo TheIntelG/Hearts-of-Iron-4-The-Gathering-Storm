@@ -1,8 +1,11 @@
 ﻿l_english:
+# Germany Ideas
  GER_carrier_optimization:0 "Carrier Optimization"
  GER_carrier_optimization_desc:0 "In order for us to effectively and at a steady pase build our carriers we are required to optimize our ship building"
- CHI_german_three_year_plan:0 "German Three-Year Plan"
- CHI_german_three_year_plan_desc:0 "With the German Three-Year Plan in place we should be able to resist further Japanese attacks and become an industrial powerhouse in the future."
-
+ GER_integrated_austrian_economy:0 "Integrated Austria Economy"
+ GER_integrated_austrian_economy_desc:0 "By establishing Reichskommissariat Österreich we are able to use Austrian economy to boost our own."
  hanomag:0 "Hanomag"
  auto_union:0 "Auto Union"
+# Nationalist China Ideas
+ CHI_german_three_year_plan:0 "German Three-Year Plan"
+ CHI_german_three_year_plan_desc:0 "With the German Three-Year Plan in place we should be able to resist further Japanese attacks and become an industrial powerhouse in the future."

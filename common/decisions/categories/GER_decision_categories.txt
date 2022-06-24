@@ -80,6 +80,7 @@ GER_austro_hungarian_empire = {
 	}
 }
 
+# THE GATHERING STORM
 GER_invest_in_china = {
 	icon = GFX_decision_category_SOV_merge_designers
 

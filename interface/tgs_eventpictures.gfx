@@ -27,4 +27,8 @@ spriteTypes = {
 		name = "GFX_report_event_ger_tank_1"
 		texturefile = "gfx/event_pictures/GER/report_event_ger_tank_1.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_ger_nationalist_spain_ally"
+		texturefile = "gfx/event_pictures/GER/report_event_ger_nationalist_spain_ally.dds"
+	}
 }
